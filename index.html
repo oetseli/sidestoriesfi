@@ -3,21 +3,11 @@ layout: default
 ---
 
 <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  <p class="hero">Helsinki based film production company focusing on shorts and docs.</p>
+  
+  <h4>Follow us on</h4>
+  <p><a href="https://vimeo.com/sidestoriesfi" target="_blank">Vimeo</a> | <a href="https://twitter.com/sidestoriesfi" target="_blank">Twitter</a> | <a href="https://www.facebook.com/sidestoriesfi" target="_blank">Facebook</a> | <a href="https://www.instagram.com/sidestoriesfi/" target="_blank">Instagram</a></p>
+  
+  <h4>Contact us</h4>
+  <p> <a href="mailto:info@sidestories.fi">info@sidestories.fi</a></p>
 </div>
