@@ -1,0 +1,60 @@
+.logo {
+	margin: 0 auto;
+	max-width: 50rem;
+	text-align: center;
+	width: 100%;
+
+	svg {
+		margin: -7.5% 0 -7.5% 0;
+	}
+
+	a {
+		display: block;
+	}
+
+	a:hover,
+	a:focus {
+		background: $near-white-color;
+
+		svg path {
+			fill: $black-color;
+		}
+	}
+}
+
+.logo--compact {
+	max-width: 10rem;
+	min-width: 8rem;
+
+	svg {
+		margin: 0;
+	}
+}
+
+.logo--negative {
+	svg path {
+		fill: $white-color;
+	}
+}
+
+.header--bar {
+	background: $black-color;
+	margin-bottom: $spacing-unit*4;
+	padding: 0;
+
+	.logo--compact {
+		background: $black-color;
+		margin: 0;
+		margin-bottom: -$spacing-unit*2;
+		position: relative;
+		z-index: 10;
+	}
+}
+
+.header--content {
+	align-items: end;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: $content-width + 10rem;
+}

@@ -1,0 +1,38 @@
+nav.main-menu {
+	font-family: $alt-font-family;
+	font-size: $h4-size;
+	text-transform: uppercase;
+
+	ul {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: 0 $spacing-unit/4;
+
+			a, a:visited {
+				border: 0;
+				color: $near-white-color;
+				display: block;
+				margin-top: 0.3rem + ($spacing-unit / 4);
+				padding: $spacing-unit/2 $spacing-unit 0 $spacing-unit/2;
+
+				&:after {
+					border-bottom: 0.3rem solid transparent;
+					content: ' ';
+					display: block;
+					margin-top: $spacing-unit / 3;
+				}
+			}
+
+			a:hover {
+				&:after {
+					border-bottom: 0.3rem solid $white-color;
+					margin-top: $spacing-unit / 3;
+				}
+			}
+		}
+	}
+}

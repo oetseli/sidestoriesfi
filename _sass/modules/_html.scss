@@ -4,9 +4,11 @@ html {
 }
 
 body {
+	background: $near-white-color;
 	color: $text-color;
 	font-family: $base-font-family;
 	line-height: $base-line-height;
+	margin: 0;
 }
 
 svg {
