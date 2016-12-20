@@ -3,8 +3,8 @@
 	max-width: $content-width;
 	width: 90%;
 
-	.full-screen-element + & {
-		margin-top: $spacing-unit * 3;
+	.full-screen-element-ready + & {
+		margin-top: $spacing-unit * 2;
 	}
 }
 

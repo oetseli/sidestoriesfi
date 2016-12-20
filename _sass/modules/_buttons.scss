@@ -1,0 +1,25 @@
+a.button {
+	border: 3px solid currentColor;
+	border-radius: 0.3rem;
+	color: $black-color;
+	display: inline-block;
+	font-family: $alt-font-family;
+	margin: $spacing-unit / 2 0;
+	padding: $spacing-unit / 3 $spacing-unit / 2;
+
+	&:hover,
+	&:focus {
+		background: $black-color;
+		color: $white-color;
+	}
+}
+
+a.button--negative {
+	color: $white-color;
+
+	&:hover,
+	&:focus {
+		background: $white-color;
+		color: $black-color;
+	}
+}

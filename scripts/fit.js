@@ -105,10 +105,12 @@ $(document).ready(function() {
         });
       });
     };
-    
-    $(that).addClass('full-screen-element-ready');
-    $(window).resize(function() { resize(); });
-    resize();
+
+    if (!$(this).hasClass('full-screen-element-disabled')) {
+      $(that).addClass('full-screen-element-ready');
+      $(window).resize(function() { resize(); });
+      resize();
+    }
   });
 
   // Set first full-screen-element.

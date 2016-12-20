@@ -2,12 +2,13 @@
 <html>
 	{% include bootstrap/head.html %}
 	<body>
-		<div class="page page--project">
+		<div class="page">
 			{% include header.html %}
 
-				<div class="full-screen-element">
+			<article class="post--project">
+				<header class="full-screen-element">
 					<div class="full-screen-content content">
-						<h2>{{ page.title }}</h2>
+						<h1>{{ page.title }}</h1>
 						{% if page.description %}
 							<p class="hero">
 								{{ page.description }}
@@ -43,17 +44,19 @@
 							</div>
 						{% endif %}
 					</div>
-				</div>
+				</header>
 
 				<div class="content content--spaced">
 					{{ content }}
 				</div>
 
-			<div class="footer">
-				<div class="content">
-					{% include footer.html %}
+				<div class="footer">
+					<div class="content">
+						{% include footer.html %}
+					</div>
 				</div>
-			</div>
+
+			</article>
 		</div>
 		{% include bootstrap/scripts.html %}
 	</body>

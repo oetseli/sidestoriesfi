@@ -1,5 +1,6 @@
 .full-screen-element {
-  .header--bar + & {
+  .header--bar + &,
+  .header--bar + article > &:first-child {
     margin-top: -$spacing-unit*4;
   }
 
@@ -12,14 +13,14 @@
   }
 
   .full-screen-content {
-    color: $white-color;
+    @extend .content;
     margin: 0 auto;
     max-width: $content-width;
-    padding: $spacing-unit*3 0;
+    padding: $spacing-unit 0;
     text-align: center;
 
-    h2 {
-      font-size: $h1-size;
+    @media all and (min-width: $on-laptop) {
+      padding: $spacing-unit * 3 0;
     }
   }
 
@@ -46,7 +47,8 @@
     }
   }
 
-  &.full-screen-element-ready {
+  &.full-screen-element-ready,
+  &.full-screen-element-disabled {
     .full-screen-background {
       height: 100%;
       left: 0;
@@ -56,8 +58,26 @@
     }
 
     .full-screen-content {
+      color: $white-color;
       position: relative;
       z-index: 2;
+
+      a.button {
+        @extend a.button--negative;
+      }
+    }
+  }
+
+  &.full-screen-element-disabled {
+    overflow: hidden;
+    position: relative;
+
+    .full-screen-content {
+      padding: $spacing-unit 0;
+    }
+
+    .full-screen-helper {
+      display: none;
     }
   }
 }
