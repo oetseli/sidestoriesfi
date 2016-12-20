@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	{% include bootstrap/head.html %}
+	<body>
+		<div class="page page--project">
+			{% include header.html %}
+
+				<div class="full-screen-element">
+					<div class="full-screen-content content">
+						<h2>{{ page.title }}</h2>
+						{% if page.description %}
+							<p class="hero">
+								{{ page.description }}
+							</p>
+						{% endif %}
+
+						<div class="meta-fields meta-fields--centered">
+							{% if page.published %}
+								<div class="meta-field">
+									<h4>Year</h4>
+									<p>{{ page.published }}</p>
+								</div>
+							{% endif %}
+							{% if page.runtime %}
+								<div class="meta-field">
+									<h4>Running time</h4>
+									<p>{{ page.runtime }}</p>
+								</div>
+							{% endif %}
+							{% if page.category %}
+								<div class="meta-field">
+									<h4>Category</h4>
+									<p>{{ page.category }}</p>
+								</div>
+							{% endif %}
+						</div>
+					</div>
+
+					<div class="full-screen-background">
+						{% if page.background_image %}
+							<div class="full-screen-background-content">
+									<img src="/images/tekstuuri.jpg" />
+							</div>
+						{% endif %}
+					</div>
+				</div>
+
+				<div class="content content--spaced">
+					{{ content }}
+				</div>
+
+			<div class="footer">
+				<div class="content">
+					{% include footer.html %}
+				</div>
+			</div>
+		</div>
+		{% include bootstrap/scripts.html %}
+	</body>
+</html>

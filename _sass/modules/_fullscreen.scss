@@ -15,7 +15,7 @@
     color: $white-color;
     margin: 0 auto;
     max-width: $content-width;
-    padding: $spacing-unit*4 0;
+    padding: $spacing-unit*3 0;
     text-align: center;
 
     h2 {
@@ -38,6 +38,7 @@
       position: absolute;
       text-align: center;
       width: 100%;
+      z-index: 3;
 
       &:after {
         content: '\2193'; // Downwards arrow.
