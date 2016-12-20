@@ -59,3 +59,24 @@
 	margin: 0 auto;
 	max-width: $content-width + 10rem;
 }
+
+.mobile-menu--active {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	.header--content {
+		display: block;
+		margin: 0;
+	}
+
+	.mobile-menu--drawer {
+		width: 100%;
+	}
+
+	.logo {
+		margin-bottom: 0;
+		max-width: 7rem;
+	}
+}
