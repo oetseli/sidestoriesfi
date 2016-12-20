@@ -1,8 +1,9 @@
 ---
 layout: project
 title:  "The Long Shift"
-categories: projects
+lang: en
 published: 2014
+categories: movies
 category: Documentary
 runtime: "1 h 13 min"
 description: "A small town ice hockey team fights through their first season in an upper division. The players' dreams might have changed from childhood but their love for the sport does not fade."

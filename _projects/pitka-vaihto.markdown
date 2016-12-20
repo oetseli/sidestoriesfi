@@ -1,8 +1,9 @@
 ---
 layout: project
 title:  "Pitkä vaihto"
-categories: projects
+lang: fi
 published: 2014
+categories: movies
 category: Dokumentti
 runtime: "1 h 13 min"
 description: "Pitkä vaihto -dokumenttielokuvassa seurataan II-divisioonassa pelaavaa Haka Hockey -joukkuetta ja sen pelaajia. Osa heistä on nähnyt SM-liigakuviot ja kiertänyt Pohjois-Amerikankin kaukaloita, mutta yksikään ei ole tavoittanut kirkkainta unelmaansa jääkiekkoammattilaisuudesta."

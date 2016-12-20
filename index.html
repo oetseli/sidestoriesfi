@@ -2,17 +2,10 @@
 layout: default
 ---
 
-<div class="full-screen-element">
-	<div class="full-screen-content">
-		<h2>Pitkä vaihto</h2>
-		<p class="hero">
-			Suomessa on 190 000 jääkiekon harrastajaa. Vain murto-osa halukkaista yltää ammattilaistasolle. Vielä harvempi onnistuu säilyttämään paikkansa huipulla.
-		</p>
-	</div>
+{% if site.active_lang == "fi" %}
+	{% include_relative index.fi.html %}
+{% endif %}
 
-	<div class="full-screen-background">
-		<div class="full-screen-background-content">
-			<img src="/images/tekstuuri.jpg" />
-		</div>
-	</div>
-</div>
+{% if site.active_lang == "en" %}
+	{% include_relative index.en.html %}
+{% endif %}

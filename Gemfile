@@ -11,8 +11,9 @@ ruby RUBY_VERSION
 # Happy Jekylling!
 gem "jekyll", "3.2.1"
 
-# i18n
-gem 'jekyll-polyglot'
+group :jekyll_plugins do
+  gem 'jekyll-polyglot', :git => "git://github.com/vlsi/polyglot.git", :branch => 'translate_collections'
+end
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima"
