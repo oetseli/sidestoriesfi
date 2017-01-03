@@ -18,19 +18,19 @@
 						<div class="meta-fields meta-fields--centered">
 							{% if page.published %}
 								<div class="meta-field">
-									<h4>Year</h4>
+									<h4>{{ site.data["i18n"]["year"] }}</h4>
 									<p>{{ page.published }}</p>
 								</div>
 							{% endif %}
 							{% if page.runtime %}
 								<div class="meta-field">
-									<h4>Running time</h4>
+									<h4>{{ site.data["i18n"]["running_time"] }}</h4>
 									<p>{{ page.runtime }}</p>
 								</div>
 							{% endif %}
 							{% if page.category %}
 								<div class="meta-field">
-									<h4>Category</h4>
+									<h4>{{ site.data["i18n"]["category"] }}</h4>
 									<p>{{ page.category }}</p>
 								</div>
 							{% endif %}

@@ -13,10 +13,12 @@ twitter_username: sidestoriesfi
 markdown: kramdown
 theme: minima
 
+# Polyglot config.
 languages: ["fi", "en"]
 default_lang: "fi"
 exclude_from_localization: ["javascript", "images", "css"]
 parallel_localization: true
+data_dir: ./_data
 
 collections:
   projects:
