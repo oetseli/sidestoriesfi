@@ -12,7 +12,7 @@ ruby RUBY_VERSION
 gem "jekyll", "3.2.1"
 
 group :jekyll_plugins do
-  gem 'jekyll-polyglot', :git => "git://github.com/vlsi/polyglot.git", :branch => 'translate_collections'
+  gem 'jekyll-polyglot'
 end
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
