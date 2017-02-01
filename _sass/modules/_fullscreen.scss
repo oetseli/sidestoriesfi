@@ -52,9 +52,21 @@
     .full-screen-background {
       height: 100%;
       left: 0;
+      width: 100%;
       position: absolute;
       top: 0;
-      width: 100%;
+
+      img {
+        width: 100%;
+      }
+
+      .full-screen-background-css {
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
     }
 
     .full-screen-content {

@@ -19,7 +19,7 @@ a.button--negative {
 
 	&:hover,
 	&:focus {
-		background: $white-color;
-		color: $black-color;
+		background: rgba(0, 0, 0, 0.33);
+		color: darken($white-color, 33%);
 	}
 }

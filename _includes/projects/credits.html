@@ -1,0 +1,9 @@
+<div class="project--credits">
+  {% for credit in page.credits %}
+    <div class="project--credit">
+      {% assign role = credit[0] %}
+      <h4>{{ site.data["i18n"]["roles"][role] }}</h4>
+      <p>{{ credit[1] }}</p>
+    </div>
+  {% endfor %}
+</div>

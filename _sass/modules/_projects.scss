@@ -1,0 +1,19 @@
+.project--credits {
+  background: $black-color;
+  color: $white-color;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $spacing-unit / 2 0 $spacing-unit / 2 $spacing-unit;
+}
+.project--credit {
+  margin-right: $spacing-unit;
+
+  h4 {
+    @extend h5;
+    margin-bottom: 0;
+
+    + p {
+      margin-top: 0;
+    }
+  }
+}

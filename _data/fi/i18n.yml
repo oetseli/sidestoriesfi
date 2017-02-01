@@ -1,3 +1,9 @@
 year: "Vuosi"
 running_time: "Kesto"
 category: "Genre"
+roles:
+  director: "Ohjaaja"
+  producer: "Tuottaja"
+  editor: "Leikkaaja"
+  dop: "Kuvaaja"
+  sound: "Äänitys"

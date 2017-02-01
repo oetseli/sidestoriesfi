@@ -67,8 +67,13 @@
 	justify-content: space-between;
 
 	.header--content {
-		display: block;
+		display: flex;
 		margin: 0;
+
+		.language-switcher {
+			align-self: center;
+			padding: $spacing-unit / 4;
+		}
 	}
 
 	.mobile-menu--drawer {
@@ -77,6 +82,36 @@
 
 	.logo {
 		margin-bottom: 0;
-		max-width: 7rem;
+		max-width: 6rem;
+	}
+}
+
+.language-switcher {
+	align-items: end;
+	align-self: end;
+	display: flex;
+	padding-top: $spacing-unit / 2;
+
+	a {
+		@extend h5;
+		border: 0;
+		color: $white-color;
+		margin: 0;
+		padding: $spacing-unit / 4 $spacing-unit / 2;
+
+		&:hover,
+		&:focus {
+			background: $white-color;
+			color: $black-color;
+		}
+
+		&.active {
+			&,
+			&:hover,
+			&:focus {
+				background: $white-color;
+				color: $grey-color;
+			}
+		}
 	}
 }
