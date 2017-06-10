@@ -87,30 +87,30 @@
 }
 
 .language-switcher {
-	align-items: end;
-	align-self: end;
+	align-items: flex-end;
+	align-self: flex-end;
 	display: flex;
 	padding-top: $spacing-unit / 2;
 
 	a {
 		@extend h5;
 		border: 0;
+		border-bottom: $spacing-unit / 10 solid transparent;
 		color: $white-color;
-		margin: 0;
-		padding: $spacing-unit / 4 $spacing-unit / 2;
+		line-height: $spacing-unit;
+		margin: 0 $spacing-unit / 4 0 0;
+		padding: $spacing-unit / 3 $spacing-unit / 2;
 
 		&:hover,
 		&:focus {
-			background: $white-color;
-			color: $black-color;
+			border-bottom-color: $white-color;
 		}
 
 		&.active {
 			&,
 			&:hover,
 			&:focus {
-				background: $white-color;
-				color: $grey-color;
+				border-bottom-color: $white-color;
 			}
 		}
 	}

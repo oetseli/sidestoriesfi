@@ -1,9 +1,11 @@
 nav.main-menu {
+	align-self: flex-end;
 	font-family: $alt-font-family;
 	font-size: $h4-size;
 	text-transform: uppercase;
 
 	ul {
+		align-items: flex-end;
 		display: flex;
 		list-style: none;
 		margin: 0;
@@ -16,20 +18,22 @@ nav.main-menu {
 				border: 0;
 				color: $near-white-color;
 				display: block;
+				line-height: $spacing-unit;
 				margin-top: 0.3rem + ($spacing-unit / 4);
 				padding: $spacing-unit/2 $spacing-unit 0 $spacing-unit/2;
 
 				&:after {
-					border-bottom: 0.3rem solid transparent;
+					border-bottom: $spacing-unit / 10 solid transparent;
 					content: ' ';
 					display: block;
 					margin-top: $spacing-unit / 3;
 				}
 			}
 
-			a:hover {
+			a:hover,
+			a:focus {
 				&:after {
-					border-bottom: 0.3rem solid $white-color;
+					border-bottom-color: $white-color;
 					margin-top: $spacing-unit / 3;
 				}
 			}
