@@ -40,21 +40,38 @@
 					<div class="full-screen-background">
 						{% if page.liftup_image %}
 							<div class="full-screen-background-content">
-									<img src="{{ site.baseurl }}/images/{{ page.liftup_image }}" />
+									<img src="{{ site.baseurl }}/images/{{ page.liftup_image.src }}" alt="{{ page.liftup_image.alt }}"/>
 							</div>
 						{% endif %}
 					</div>
 				</header>
 
-				<div class="content content--spaced">
-					{{ content }}
-				</div>
+				<section class="project-meta">
+					{% include projects/credits.html %}
+				</section>
 
-				<div class="footer">
+				<section class="content content--spaced">
+					{{ content }}
+				</section>
+
+				{% if page.trailer %}
+				<section class="trailer">
+					<div class="trailer--content">
+						<h2>Trailer</h2>
+						{% assign id = "/videos/" | append: page.trailer %}
+						{% assign video = site.videos | where: "id", id | first %}
+						{% assign source = video.vimeo %}
+
+						{% include videos/vimeo.html source=source %}
+					</div>
+				</section>
+				{% endif %}
+
+				<footer class="footer">
 					<div class="content">
 						{% include footer.html %}
 					</div>
-				</div>
+				</footer>
 
 			</article>
 		</div>

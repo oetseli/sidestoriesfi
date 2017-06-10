@@ -6,7 +6,9 @@ published: 2014
 categories: movies
 category: Dokumentti
 runtime: "1 h 13 min"
-liftup_image: projects/pv1.jpg
+liftup_image:
+  src: projects/pv1.jpg
+  alt: "Lähikuva vanhemmasta pelaajasta, joka kuuntelee vieressä istuvan joukkuekaverin keskustelua."
 description: "Pitkä vaihto -dokumenttielokuvassa seurataan II-divisioonassa pelaavaa Haka Hockey -joukkuetta ja sen pelaajia. Osa heistä on nähnyt SM-liigakuviot ja kiertänyt Pohjois-Amerikankin kaukaloita, mutta yksikään ei ole tavoittanut kirkkainta unelmaansa jääkiekkoammattilaisuudesta."
 credits:
   director: "Otto Heikola"
@@ -14,9 +16,8 @@ credits:
   editor: "Anniina Kauttonen"
   dop: "Otso Lahti"
   sound: "Mikko Heino"
+trailer: "pitka-vaihto-trailer"
 ---
-
-{% include projects/credits.html %}
 
 ## Synopsis
 
@@ -27,7 +28,3 @@ Pitkä vaihto -dokumenttielokuvassa seurataan II-divisioonassa pelaavaa Haka Hoc
 Joukkueen elämää tarkastellaan pukukopissa ja vaihtoaitiossa runkosarjasta kevään pudotuspeleihin. Samalla keskitytään henkilökohtaisiin tarinoihin: pelaajat pohtivat, minkälaisia esteitä unelmien eteen on asettunut, miten niistä on selvitty, ja mitä sitten, kun unelmat eivät toteudukaan?
 
 Valot himmenevät pikkukaupungin jäähallissa. Joukkue luistelee jäälle savukoneen, äänekkäästi kannustavan kotikatsomon ja vilkkuvien valojen saattelemina. Pelaajat saavat tehdä sitä, mistä ovat aina nauttineet. Onko sillä lopulta väliä, ettei kyseessä ole NHL?
-
-## Trailer
-
-<iframe src="https://player.vimeo.com/video/103231410?color=ffcc33" width="100%" height="346" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
