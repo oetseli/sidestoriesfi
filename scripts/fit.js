@@ -72,6 +72,22 @@ $.fn.extend({
         // Limit clipping box height to container height.
         $clippingBox.height(containerHeight);
       }
+
+      // if (settings.centering) {
+      //   // Center vertically.
+      //   var overflowY = height - containerHeight;
+      //   if (overflowY > 0) {
+      //     $(this).css('top', -(overflowY / 2));
+      //   }
+
+      //   // Center horizontally.
+      //   // Get width again, because it may have been updated.
+      //   var newWidth = $(this).width();
+      //   var overflowX = width - containerWidth;
+      //   if (overflowX > 0) {
+      //     $(this).css('left', -(overflowX / 2));
+      //   }
+      // }
     }
     else {
       // Width is handled by block flow so only force min-height.
