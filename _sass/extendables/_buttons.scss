@@ -1,0 +1,33 @@
+%button {
+  border: $line-stroke-width solid currentColor;
+  border-radius: $default-border-radius;
+  color: $black-color;
+  display: inline-block;
+  font-family: $alt-font-family;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin: $spacing-unit / 2 0;
+  padding: $spacing-unit / 3 $spacing-unit / 2;
+  text-transform: uppercase;
+
+  &:visited {
+    border-bottom: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    background: $black-color;
+    color: $white-color;
+  }
+}
+
+%button--negative {
+  color: $white-color;
+
+	&:hover,
+	&:focus {
+		background: $white-color;
+		border-color: $white-color;
+		color: $black-color;
+	}
+}

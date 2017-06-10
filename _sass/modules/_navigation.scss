@@ -23,7 +23,7 @@ nav.main-menu {
 				padding: $spacing-unit/2 $spacing-unit 0 $spacing-unit/2;
 
 				&:after {
-					border-bottom: $spacing-unit / 10 solid transparent;
+					border-bottom: $line-stroke-width solid transparent;
 					content: ' ';
 					display: block;
 					margin-top: $spacing-unit / 3;

@@ -95,7 +95,7 @@
 	a {
 		@extend h5;
 		border: 0;
-		border-bottom: $spacing-unit / 10 solid transparent;
+		border-bottom: $line-stroke-width solid transparent;
 		color: $white-color;
 		line-height: $spacing-unit;
 		margin: 0 $spacing-unit / 4 0 0;

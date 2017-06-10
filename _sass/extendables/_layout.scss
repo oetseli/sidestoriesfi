@@ -1,0 +1,28 @@
+%edge-to-edge {
+  margin-left: -5vw;
+  margin-right: -5vw;
+}
+
+%container {
+  margin: 0 auto;
+  max-width: $content-width;
+}
+%container--padded {
+  @extend %container;
+  width: 90%;
+}
+%container--edge {
+  @extend %container;
+
+  @media all and (min-width: $content-width) {
+    width: 90%;
+  }
+}
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

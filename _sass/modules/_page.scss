@@ -1,12 +1,15 @@
 .content {
-	margin: 0 auto;
-	max-width: $content-width;
-	width: 90%;
+	@extend %container;
 
 	.full-screen-element-ready + & {
 		margin-top: $spacing-unit * 2;
 	}
 }
+.content--spaced {
+	padding-bottom: $spacing-unit;
+	padding-top: $spacing-unit;
+}
+
 
 .hero {
 	font-size: $h4-size;
