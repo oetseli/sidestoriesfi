@@ -6,6 +6,8 @@ published: 2014
 categories: movies
 category: Dokumentti
 runtime: "1 h 13 min"
+theme: blue
+liftup: true
 liftup_image:
   src: projects/pv1.jpg
   alt: "Lähikuva vanhemmasta pelaajasta, joka kuuntelee vieressä istuvan joukkuekaverin keskustelua."

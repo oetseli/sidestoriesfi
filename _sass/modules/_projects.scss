@@ -1,10 +1,20 @@
-.post--project .full-screen-element {
-  background: $black-color;
+.post--project {
+  .full-screen-element {
+    background: $black-color;
+
+    h1 {
+      @extend %heading-underline;
+    }
+  }
 }
 
 .project--credits {
   background: $black-color;
   color: $white-color;
+
+  .theme-blue & {
+    background-color: $blue-theme-color;
+  }
 }
 // .project--credits-title {
 //   display: flex;
@@ -21,6 +31,11 @@
 // }
 .project--credits-title {
   overflow: hidden; // Margin-top forces black background to stretch up.
+  text-align: center;
+
+  h2 {
+    @extend %heading-underline;
+  }
 }
 .project--credits-container {
   @extend %container--padded;
@@ -28,10 +43,12 @@
 .project--credits-content {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   padding-bottom: $spacing-unit;
 }
 .project--credit {
   margin-right: $spacing-unit;
+  text-align: center;
 
   h4 {
     @extend h5;
@@ -47,11 +64,8 @@
 }
 
 .trailer {
-  background: #000; // Match Vimeo.
-  color: $white-color;
+  @extend %negative-container;
   margin-top: $spacing-unit;
-  overflow: hidden;
-  padding: $spacing-unit 0;
 }
 .trailer--content {
   @extend %container--padded;

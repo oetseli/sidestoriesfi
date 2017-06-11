@@ -38,3 +38,19 @@
 	justify-content: space-around;
 	width: auto;
 }
+
+.featured-area {
+	@extend %negative-container;
+	padding-top: $spacing-unit * 2;
+
+	> h2 {
+		@extend %container--padded;
+		@extend %heading-underline;
+		text-align: center;
+	}
+
+	.header--bar + &,
+	.header--bar + article > &:first-child {
+		margin-top: -$spacing-unit*4;
+	}
+}

@@ -12,6 +12,12 @@
     }
   }
 
+  h1.full-screen-element-title {
+    + p {
+      @extend .hero;
+    }
+  }
+
   .full-screen-content {
     @extend .content;
     margin: 0 auto;
@@ -91,5 +97,14 @@
     .full-screen-helper {
       display: none;
     }
+  }
+}
+
+.full-screen-background.full-screen-background-colorize {
+  .theme-black & {
+    filter: grayscale(100%);
+  }
+  .theme-blue & {
+    filter: sepia(100%) hue-rotate(180deg) saturate(4) brightness(0.9);
   }
 }

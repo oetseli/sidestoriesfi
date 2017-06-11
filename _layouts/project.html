@@ -5,49 +5,29 @@
 		<div class="page">
 			{% include header.html %}
 
-			<article class="post--project">
-				<header class="full-screen-element">
-					<div class="full-screen-content content">
-						<h1>{{ page.title }}</h1>
-						{% if page.description %}
-							<p class="hero">
-								{{ page.description }}
-							</p>
-						{% endif %}
+			{% if page.theme %}
+			  {% assign theme_class = "theme-" | append: page.theme %}
+			{% else %}
+			  {% assign theme_class = "" %}
+			{% endif %}
 
-						<div class="meta-fields meta-fields--centered">
-							{% if page.published %}
-								<div class="meta-field">
-									<h4>{{ site.data["i18n"]["year"] }}</h4>
-									<p>{{ page.published }}</p>
-								</div>
-							{% endif %}
-							{% if page.runtime %}
-								<div class="meta-field">
-									<h4>{{ site.data["i18n"]["running_time"] }}</h4>
-									<p>{{ page.runtime }}</p>
-								</div>
-							{% endif %}
-							{% if page.category %}
-								<div class="meta-field">
-									<h4>{{ site.data["i18n"]["category"] }}</h4>
-									<p>{{ page.category }}</p>
-								</div>
-							{% endif %}
-						</div>
-					</div>
-
-					<div class="full-screen-background">
-						{% if page.liftup_image %}
-							<div class="full-screen-background-content">
-									<img src="{{ site.baseurl }}/images/{{ page.liftup_image.src }}" alt="{{ page.liftup_image.alt }}"/>
-							</div>
-						{% endif %}
-					</div>
-				</header>
+			<article class="post--project {{ theme_class }}">
+				{%
+					include blocks/featured.html
+					heading=1
+					fullscreen=true
+					theme=page.theme
+					colorize=true
+					title=page.title
+					description=page.description
+					published=page.published
+					runtime=page.runtime
+					category=page.category
+					liftup_image=page.liftup_image
+				%}
 
 				<section class="project-meta">
-					{% include projects/credits.html %}
+					{% include projects/crew.html %}
 				</section>
 
 				<section class="content content--spaced">

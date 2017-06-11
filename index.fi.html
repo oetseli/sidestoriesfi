@@ -1,17 +1,21 @@
-<div class="full-screen-element full-screen-element-disabled">
-	<div class="full-screen-content">
-		<h2>Pitkä vaihto</h2>
-		<p>
-			Suomessa on 190 000 jääkiekon harrastajaa. Vain murto-osa halukkaista yltää ammattilaistasolle. Vielä harvempi onnistuu säilyttämään paikkansa huipulla.
-		</p>
-		<p>
-			<a href="{{ site.baseurl }}/projects/pitka-vaihto" class="button button--negative">Lue lisää</a>
-		</p>
-	</div>
+<div class="featured-area">
+	<h2>Ajankohtaiset projektit</h2>
 
-	<div class="full-screen-background">
-		<div class="full-screen-background-css" style="background-image: url({{ site.baseurl }}/images/projects/pv1.jpg)">
+	{% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "published", "last" | reverse %}
+	{% for project in projects | limit: 2 %}
 
-		</div>
-	</div>
+		{%
+			include blocks/featured.html
+			heading=2
+			fullscreen=false
+			colorize=true
+			theme=project.theme
+			title=project.title
+			description=project.description
+			link=project.url
+			liftup_image=project.liftup_image
+		%}
+
+	{% endfor %}
+
 </div>

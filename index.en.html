@@ -1,17 +1,21 @@
-<div class="full-screen-element full-screen-element-disabled">
-	<div class="full-screen-content content">
-		<h2>The Long Shift</h2>
-		<p>
-			A small town ice hockey team fights through their first season in an upper division. The players' dreams might have changed from childhood but their love for the sport does not fade.
-		</p>
-		<p>
-			<a href="{{ site.baseurl }}/projects/long-shift" class="button button--negative">Read more</a>
-		</p>
-	</div>
+<div class="featured-area">
+	<h2>Recent Projects</h2>
 
-	<div class="full-screen-background">
-		<div class="full-screen-background-content">
-			<img src="{{ site.baseurl }}/images/tekstuuri.jpg" />
-		</div>
-	</div>
+	{% assign projects = site.projects | where: "lang", "en" %}
+	{% for project in projects | limit: 2 %}
+
+		{%
+			include blocks/featured.html
+			heading=2
+			fullscreen=false
+			colorize=true
+			theme=project.theme
+			title=project.title
+			description=project.description
+			link=project.url
+			liftup_image=project.liftup_image
+		%}
+
+	{% endfor %}
+
 </div>

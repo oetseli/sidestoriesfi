@@ -1,4 +1,4 @@
-credits: "Tekijät"
+crew: "Tekijät"
 year: "Vuosi"
 running_time: "Kesto"
 category: "Genre"
@@ -8,3 +8,5 @@ roles:
   editor: "Leikkaaja"
   dop: "Kuvaaja"
   sound: "Äänitys"
+
+read_more: "Lue lisää"
