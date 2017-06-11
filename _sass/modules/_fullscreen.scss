@@ -1,6 +1,7 @@
 .full-screen-element {
   .header--bar + &,
-  .header--bar + article > &:first-child {
+  .header--bar + article > &:first-child,
+  .header--bar + article > header > & {
     margin-top: -$spacing-unit*4;
   }
 
@@ -49,6 +50,54 @@
 
       &:after {
         content: '\2193'; // Downwards arrow.
+      }
+    }
+  }
+
+  .full-screen-background-toggler {
+    color: $white-color;
+    cursor: pointer;
+    right: $spacing-unit;
+    position: absolute;
+    top: $spacing-unit;
+    z-index: 999;
+  }
+  &.full-screen-element-ready {
+    .full-screen-content {
+      -webkit-transition: all 0.5s;
+    }
+    .full-screen-background {
+      -webkit-transition: all 0.25s;
+      -webkit-transition-delay: 0.25s;
+
+      > * {
+        -webkit-transition: all 0.25s;
+      }
+    }
+
+    // Reverse colorize effect transition order.
+    &.full-screen-background-visible {
+      .full-screen-background {
+        -webkit-transition-delay: 0s;
+
+        > * {
+          -webkit-transition-delay: 0.25s;
+        }
+      }
+    }
+  }
+
+  &.full-screen-background-visible {
+    .full-screen-content {
+      filter: blur(10px);
+      opacity: 0;
+    }
+    .full-screen-background {
+      filter: none !important;
+
+      > * {
+        filter: none !important;
+        opacity: 1;
       }
     }
   }
@@ -105,6 +154,10 @@
     filter: grayscale(100%);
   }
   .theme-blue & {
-    filter: sepia(100%) hue-rotate(180deg) saturate(4) brightness(0.9);
+    filter: hue-rotate(180deg) saturate(25) brightness(0.85) contrast(105%);
+
+    > * {
+      filter: sepia(100%) saturate(0.1);
+    }
   }
 }

@@ -12,19 +12,22 @@
 			{% endif %}
 
 			<article class="post--project {{ theme_class }}">
-				{%
-					include blocks/featured.html
-					heading=1
-					fullscreen=true
-					theme=page.theme
-					colorize=true
-					title=page.title
-					description=page.description
-					published=page.published
-					runtime=page.runtime
-					category=page.category
-					liftup_image=page.liftup_image
-				%}
+
+				<header>
+					{%
+						include blocks/featured.html
+						heading=1
+						fullscreen=true
+						theme=page.theme
+						colorize=true
+						title=page.title
+						description=page.description
+						published=page.published
+						runtime=page.runtime
+						category=page.category
+						liftup_image=page.liftup_image
+					%}
+				</header>
 
 				<section class="project-meta">
 					{% include projects/crew.html %}

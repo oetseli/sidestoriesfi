@@ -106,6 +106,7 @@ $.fn.extend({
 $(document).ready(function() {
   $('.full-screen-element').each(function() {
     var that = this;
+    var disabled = $(this).hasClass('full-screen-element-disabled')
 
     var resize = function() {
       var offsetTop = $(that).offset().top;
@@ -122,10 +123,17 @@ $(document).ready(function() {
       });
     };
 
-    if (!$(this).hasClass('full-screen-element-disabled')) {
+    if (!disabled) {
       $(that).addClass('full-screen-element-ready');
       $(window).resize(function() { resize(); });
       resize();
+
+      // Add background toggler.
+      var $bgToggler = $('<span class="full-screen-background-toggler">Toggle background</span>');
+      $bgToggler.click(function(e) {
+        $(that).toggleClass('full-screen-background-visible');
+      });
+      $(that).prepend($bgToggler);
     }
   });
 
