@@ -18,6 +18,7 @@ crew:
   sound: "Mikko Heino"
 ---
 
+## Synopsis
 There are 190,000 ice hockey players in Finland. Only a fraction of them turn professional. Even fewer succeed in staying on top.
 
 The documentary follows a small town ice hockey team and its personalities during the 2013-2014 season. Some of the players have professional careers behind them but none of them have reached their biggest hockey dream.
