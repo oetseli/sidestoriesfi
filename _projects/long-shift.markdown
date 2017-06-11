@@ -6,6 +6,7 @@ published: 2014
 categories: movies
 category: Documentary
 runtime: "1 h 13 min"
+theme: blue
 liftup_image:
   src: projects/pv1.jpg
   alt: "Closeup of an older player who listens to his fellow team member next to him talking."

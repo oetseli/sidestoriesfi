@@ -19,6 +19,7 @@ crew:
   dop: "Otso Lahti"
   sound: "Mikko Heino"
 trailer: "pitka-vaihto-trailer"
+gallery: "pitka-vaihto-gallery"
 ---
 
 ## Synopsis
