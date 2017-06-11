@@ -54,3 +54,15 @@
 		margin-top: -$spacing-unit*4;
 	}
 }
+
+.content {
+	hyphens: auto;
+
+	@media all and (min-width: $lg-width) {
+		text-align: justify;
+	}
+
+	h2, h3, h4 {
+		text-align: center;
+	}
+}

@@ -26,7 +26,7 @@
     padding: $spacing-unit 0;
     text-align: center;
 
-    @media all and (min-width: $on-laptop) {
+    @media all and (min-width: $lg-width) {
       padding: $spacing-unit * 3 0;
     }
   }
@@ -61,27 +61,31 @@
     position: absolute;
     top: $spacing-unit;
     z-index: 999;
+
+    @media all and (max-width: $sm-width-max) {
+      display: none;
+    }
   }
   &.full-screen-element-ready {
     .full-screen-content {
-      -webkit-transition: all 0.5s;
+      transition: all 0.5s;
     }
     .full-screen-background {
-      -webkit-transition: all 0.25s;
-      -webkit-transition-delay: 0.25s;
+      transition: all 0.25s;
+      transition-delay: 0.1s;
 
       > * {
-        -webkit-transition: all 0.25s;
+        transition: all 0.25s;
       }
     }
 
     // Reverse colorize effect transition order.
     &.full-screen-background-visible {
       .full-screen-background {
-        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
 
         > * {
-          -webkit-transition-delay: 0.25s;
+          transition-delay: 0.1s;
         }
       }
     }
@@ -89,7 +93,7 @@
 
   &.full-screen-background-visible {
     .full-screen-content {
-      filter: blur(10px);
+      //filter: blur(10px);
       opacity: 0;
     }
     .full-screen-background {

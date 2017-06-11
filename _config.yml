@@ -13,6 +13,9 @@ twitter_username: sidestoriesfi
 markdown: kramdown
 theme: minima
 
+gem:
+- jekyll-autoprefixer
+
 # Polyglot config.
 languages: ["fi", "en"]
 default_lang: "fi"
