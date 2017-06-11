@@ -1,12 +1,12 @@
 <div class="project--credits">
   <div class="project--credits-container">
     <div class="project--credits-title">
-      <h3>
-        {{ site.data["i18n"]["credits"] }}
-      </h3>
+      <h2>
+        {{ site.data["i18n"]["crew"] }}
+      </h2>
     </div>
     <div class="project--credits-content">
-      {% for credit in page.credits %}
+      {% for credit in page.crew %}
         <div class="project--credit">
           {% assign role = credit[0] %}
           <h4>{{ site.data["i18n"]["roles"][role] }}</h4>
