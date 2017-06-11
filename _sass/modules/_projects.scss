@@ -63,14 +63,33 @@
   @extend %container--padded;
 }
 
-.trailer {
+.trailer,
+.project-gallery {
   @extend %negative-container;
   margin-top: $spacing-unit;
+  text-align: center;
 }
+
+.trailer + .project-gallery {
+  margin-top: -$spacing-unit;
+}
+
 .trailer--content {
   @extend %container--padded;
 
   > h2 {
-    margin-top: 0;
+    color: $grey-color;
+    margin-top: $spacing-unit / 2;
+    padding-bottom: $spacing-unit;
+  }
+}
+
+.project-gallery--content {
+  @extend %container--padded;
+
+  > h2 {
+    color: $grey-color;
+    margin-top: $spacing-unit / 2;
+    padding-bottom: $spacing-unit;
   }
 }

@@ -25,3 +25,5 @@ collections:
     output: true
   videos:
     output: false
+  galleries:
+    output: false

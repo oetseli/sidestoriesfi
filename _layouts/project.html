@@ -40,7 +40,7 @@
 				{% if page.trailer %}
 				<section class="trailer">
 					<div class="trailer--content">
-						<h2>Trailer</h2>
+						<h2>Traileri</h2>
 						{% assign id = "/videos/" | append: page.trailer %}
 						{% assign video = site.videos | where: "id", id | first %}
 						{% assign source = video.vimeo %}
@@ -48,6 +48,18 @@
 						{% include videos/vimeo.html source=source %}
 					</div>
 				</section>
+				{% endif %}
+
+				{% if page.gallery %}
+					<section class="project-gallery">
+						<div class="project-gallery--content">
+							<h2>Galleria</h2>
+							{% assign id = "/galleries/" | append: page.gallery %}
+							{% assign gallery = site.galleries | where: "id", id | first %}
+
+							{% include blocks/gallery.html gallery=gallery %}
+						</div>
+					</section>
 				{% endif %}
 
 				<footer class="footer">
