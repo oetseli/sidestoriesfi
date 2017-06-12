@@ -5,9 +5,11 @@ $(document).ready(function() {
 
 	var $toggler = $('<span class="mobile-menu--toggler"><span></span><span></span></span>');
 	var $drawer = $('<div class="mobile-menu--drawer"></div>');
+	var $overlay = $('<div class="mobile-menu--overlay"></div>');
 	$drawer.append($menuContent);
 	$target.append($toggler);
 	$target.append($drawer);
+	$('body').append($overlay);
 
 	var mobileActive = false;
 	var resize = function() {
@@ -22,7 +24,10 @@ $(document).ready(function() {
 	};
 
 	$toggler.click(function() {
-		$target.toggleClass('mobile-menu--open');
+		var state = $target.hasClass('mobile-menu--open');
+
+		$target.toggleClass('mobile-menu--open', !state);
+		$('body').toggleClass('mobile-menu--open', !state);
 	});
 
 	resize();

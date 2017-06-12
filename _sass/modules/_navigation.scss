@@ -13,29 +13,29 @@ nav.main-menu {
 
 		li {
 			margin: 0 $spacing-unit/4;
+		}
+	}
 
-			a, a:visited {
-				border: 0;
-				color: $near-white-color;
-				display: block;
-				line-height: $spacing-unit;
-				margin-top: 0.3rem + ($spacing-unit / 4);
-				padding: $spacing-unit/2 $spacing-unit 0 $spacing-unit/2;
+	a, a:visited {
+		border: 0;
+		color: $near-white-color;
+		display: block;
+		line-height: $spacing-unit;
+		margin-top: 0.3rem + ($spacing-unit / 4);
+		padding: $spacing-unit/2 $spacing-unit 0 $spacing-unit/2;
 
-				&:after {
-					border-bottom: $line-stroke-width solid transparent;
-					content: ' ';
-					display: block;
-					margin-top: $spacing-unit / 2;
-				}
-			}
+		&:after {
+			border-bottom: $line-stroke-width solid transparent;
+			content: ' ';
+			display: block;
+			margin-top: $spacing-unit / 2;
+		}
+	}
 
-			a:hover,
-			a:focus {
-				&:after {
-					border-bottom-color: $white-color;
-				}
-			}
+	a:hover,
+	a:focus {
+		&:after {
+			border-bottom-color: currentColor;
 		}
 	}
 }
@@ -49,7 +49,9 @@ nav.main-menu {
 	box-sizing: content-box;
 	cursor: pointer;
 	padding: $spacing-unit;
+	position: relative;
 	width: 2rem;
+	z-index: 99999;
 
 	span {
 		background: $white-color;
@@ -61,6 +63,9 @@ nav.main-menu {
 }
 
 .mobile-menu--active {
+	.mobile-menu--drawer {
+		display: block;
+	}
 	.mobile-menu--toggler {
 		display: block;
 	}
@@ -71,7 +76,7 @@ nav.main-menu {
 
 .mobile-menu--open {
 	.mobile-menu--drawer {
-		display: block;
+		transform: translateY(0%);
 	}
 	.mobile-menu--toggler {
 		span {
@@ -85,6 +90,15 @@ nav.main-menu {
 }
 
 .mobile-menu--drawer {
+	background: $black-color;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	transform: translateY(-150%);
+	transition: transform 0.25s;
+	width: 100%;
+	z-index: 9999;
+
 	ul {
 		list-style: none;
 		margin: 0;

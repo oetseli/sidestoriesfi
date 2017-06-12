@@ -1,20 +1,22 @@
 <div class="header header--bar">
 	<div class="header--content">
-		<div class="logo logo--compact logo--negative">
-			<a href="{{ site.baseurl }}/">
-				<span class="visually-hidden">Side Stories Oy</span>
-				<div class="svg" aria-hidden="true">
-					{% include bootstrap/logo.svg %}
-				</div>
-			</a>
-		</div>
+		<div class="header--static-area">
+			<div class="logo logo--compact logo--negative">
+				<a href="{{ site.baseurl }}/">
+					<span class="visually-hidden">Side Stories Oy</span>
+					<div class="svg" aria-hidden="true">
+						{% include bootstrap/logo.svg %}
+					</div>
+				</a>
+			</div>
 
-		{% include menu.html %}
+			{% include menu.html %}
 
-		<div class="language-switcher">
-			{% for tongue in site.languages %}
-				<a {% if tongue == site.active_lang %} class="active" {% endif %} href="{% if tongue == site.default_lang %} {{site.baseurl}}/ {% else %} {{site.baseurl}}/{{ tongue }} {% endif %}">{{ tongue }}</a>
-		  {% endfor %}
+			<div class="language-switcher">
+				{% for tongue in site.languages %}
+					<a {% if tongue == site.active_lang %} class="active" {% endif %} href="{% if tongue == site.default_lang %} {{site.baseurl}}/ {% else %} {{site.baseurl}}/{{ tongue }} {% endif %}">{{ tongue }}</a>
+			  {% endfor %}
+			</div>
 		</div>
 	</div>
 </div>
