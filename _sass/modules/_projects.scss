@@ -63,15 +63,10 @@
   @extend %container--padded;
 }
 
-.trailer,
-.project-gallery {
+.trailer {
   @extend %negative-container;
   margin-top: $spacing-unit;
   text-align: center;
-}
-
-.trailer + .project-gallery {
-  margin-top: -$spacing-unit;
 }
 
 .trailer--content {
@@ -85,11 +80,10 @@
 }
 
 .project-gallery--content {
-  @extend %container--padded;
-
   > h2 {
-    color: $grey-color;
-    margin-top: $spacing-unit / 2;
+    margin-top: $spacing-unit * 1.5;
+    padding: 0 $spacing-unit;
     padding-bottom: $spacing-unit;
+    text-align: center;
   }
 }

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 	{% include bootstrap/head.html %}
-	<body>
+
+	{% if page.theme %}
+		{% assign theme_class = "theme-" | append: page.theme %}
+	{% else %}
+		{% assign theme_class = "" %}
+	{% endif %}
+
+	<body class="{{ theme_class }}">
 		<div class="page">
 			{% include header.html %}
-
-			{% if page.theme %}
-			  {% assign theme_class = "theme-" | append: page.theme %}
-			{% else %}
-			  {% assign theme_class = "" %}
-			{% endif %}
 
 			<article class="post--project {{ theme_class }}">
 
@@ -33,7 +34,7 @@
 					{% include projects/crew.html %}
 				</section>
 
-				<section class="content content--spaced">
+				<section class="content content--spaced content--main">
 					{{ content }}
 				</section>
 
@@ -62,13 +63,14 @@
 					</section>
 				{% endif %}
 
-				<footer class="footer">
-					<div class="content">
-						{% include footer.html %}
-					</div>
-				</footer>
-
 			</article>
+
+			<footer class="footer">
+				<div class="content">
+					{% include footer.html %}
+				</div>
+			</footer>
+
 		</div>
 		{% include bootstrap/scripts.html %}
 	</body>

@@ -1,2 +1,6 @@
-$black-theme-color: #333;
+$black-theme-color: #aaa;
 $blue-theme-color: #089de3;
+
+$themes:
+  'black' $black-theme-color,
+  'blue' $blue-theme-color;
