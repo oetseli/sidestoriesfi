@@ -133,7 +133,7 @@ $(document).ready(function() {
       $bgToggler.click(function(e) {
         $(that).toggleClass('full-screen-background-visible');
       });
-      $(that).prepend($bgToggler);
+      //$(that).prepend($bgToggler);
     }
   });
 
