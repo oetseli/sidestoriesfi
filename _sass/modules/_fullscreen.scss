@@ -156,12 +156,28 @@
 .full-screen-background.full-screen-background-colorize {
   .theme-black & {
     filter: grayscale(100%);
+    
+    &:after {
+      background: rgba(10, 10, 10, 0.5);
+      content: ' ';
+      height: 100%;
+      opacity: 0.65;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
+    }
   }
-  .theme-blue & {
-    filter: hue-rotate(180deg) saturate(25) brightness(0.85) contrast(105%);
-
-    > * {
-      filter: sepia(100%) saturate(0.1);
+  .theme-blue & {    
+    &:after {
+      background: rgba(0, 0, 35, 0.85);
+      content: ' ';
+      height: 100%;
+      opacity: 0.65;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1;
     }
   }
 }

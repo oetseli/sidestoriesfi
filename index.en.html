@@ -1,5 +1,5 @@
 <div class="featured-area">
-	<h2>Recent Projects</h2>
+	<h2	class="visually-hidden">Recent Projects</h2>
 
 	{% assign projects = site.projects | where: "lang", "en" %}
 	{% for project in projects | limit: 2 %}

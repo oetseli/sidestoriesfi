@@ -1,5 +1,5 @@
 <div class="featured-area">
-	<h2>Ajankohtaiset projektit</h2>
+	<h2 class="visually-hidden">Ajankohtaiset projektit</h2>
 
 	{% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "published", "last" | reverse %}
 	{% for project in projects | limit: 2 %}
