@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<div class="content">
+{% for group in site.data["rental_groups"] %}
+    {% assign rentals = (site.data["rentals"] | where: "group", group[0]) %}
+    <h2>{{ group[1] }}</h2>
+
+    <table>
+        <tr>
+            {% if group[0] != "bundle" %}
+                <th>Merkki</th>
+                <th>Malli</th>
+                <th>Päivähinta</th>
+            {% else %}
+                <th colspan="2">Sisältö</th>
+                <th>Päivähinta</th>
+            {% endif %}
+        </tr>
+    {% for rental in rentals %}
+        <tr>
+        {% assign item = rental %}
+            {% if item.bundle %}
+                <td colspan="2">
+                    <ul>
+                    {% assign bundle = site.data["rental_bundles"][item.bundle] %}
+                    {% for bundle_item_key in bundle %}
+                        {% assign bundle_item = site.data["rentals"][bundle_item_key] %}
+                        <li>{{ bundle_item.name }} ({{ bundle_item.rate}} €)</li>
+                    {% endfor %}
+                    </ul>
+                </td>
+            {% else %}
+                <td>{{ item.make }}</td>
+                <td>
+                    {{ item.name }} 
+                    {% if item.extra %}
+                        <small>{{ item.extra }}</small>
+                    {% endif %}
+                </td>
+            {% endif %}
+            <td class="table-cell--center">{{ item.rate }} €</td>
+        </tr>
+    {% endfor %}
+
+    </table>
+{% endfor %}
+</div>

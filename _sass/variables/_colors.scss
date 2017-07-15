@@ -9,3 +9,6 @@ $near-white-color:		#f5f5f5;
 $grey-color:					#828282;
 $grey-color-light:		lighten($grey-color, 40%);
 $grey-color-dark:			darken($grey-color, 25%);
+
+$line-color: $grey-color-light;
+$line-color-strong: $grey-color;

@@ -1,0 +1,31 @@
+table {
+    border-collapse: collapse;
+    font-family: $alt-font-family;
+    width: 100%;
+}
+
+th {
+    background: $grey-color-dark;
+    border: 0;
+    border-bottom: $line-stroke-width solid $line-color-strong;
+    color: $white-color;
+    text-transform: uppercase;
+}
+
+td {
+    border: $line-stroke-width / 2 solid $line-color;
+}
+
+th,
+td {
+    padding: $spacing-unit / 2 $spacing-unit;
+    vertical-align: top;
+
+    small {
+        display: block;
+    }
+
+    &.table-cell--center {
+        text-align: center;
+    }
+}

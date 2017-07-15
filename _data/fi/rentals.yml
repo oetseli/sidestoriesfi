@@ -1,0 +1,18 @@
+bmpcc:
+  make: "Blackmagic"
+  name: "Pocket Cinema Camera"
+  extra: "4 akkua sisälle ja laturi"
+  rate: 79.95
+  group: camera
+
+promic:
+  make: "Rode"
+  name: "VideoMic Pro"
+  rate: 15.95
+  group: audio
+
+bundle_pocket:
+  name: "Pocket Cinema Camera -setti"
+  bundle: bundle_pocket
+  rate: 115.95
+  group: "bundle"
