@@ -1,15 +1,7 @@
 <nav class="main-menu">
 	<ul>
-		{% if site.active_lang == "fi" %}
-		<li><a href="#">Elokuvat</a></li>
-		<li><a href="#">Palvelut</a></li>
-		<li><a href="#">Vuokraus</a></li>
-		{% endif %}
-
-		{% if site.active_lang == "en" %}
-			<li><a href="#">Movies</a></li>
-			<li><a href="#">Services</a></li>
-			<li><a href="#">Rental</a></li>
-		{% endif %}
+		{% for link in site.data["menu"] %}
+			<li><a href="/{{ site.baseurl }}{{ link[0] }}">{{ link[1] }}</a></li>
+		{% endfor %}
 	</ul>		
 </nav>
