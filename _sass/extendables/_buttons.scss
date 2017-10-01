@@ -12,6 +12,7 @@
 
   &:visited {
     border-bottom: currentColor;
+    color: currentColor;
   }
 
   &:hover,
@@ -30,4 +31,20 @@
 		border-color: $white-color;
 		color: $black-color;
 	}
+}
+
+%button--subtle {
+  border-bottom-color: transparent;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+  &:hover,
+  &:focus {
+    background: none;
+    color: currentColor;
+  }
 }

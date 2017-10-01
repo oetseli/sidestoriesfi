@@ -41,6 +41,9 @@
 
 .featured-area {
 	@extend %negative-container;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 	padding-bottom: 0;
 	padding-top: $spacing-unit * 2;
 
@@ -57,7 +60,12 @@
 	}
 
 	.full-screen-element {
-		margin-bottom: $spacing-unit;
+		margin-bottom: 0.2rem;
+		width: 100%;
+	}
+
+	.button {
+		text-align: center;
 	}
 }
 

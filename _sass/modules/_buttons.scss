@@ -4,3 +4,6 @@ a.button {
 a.button--negative {
 	@extend %button--negative;
 }
+a.button--subtle {
+	@extend %button--subtle;
+}
