@@ -2,8 +2,9 @@ $base-font-family: "Playfair Display", Helvetica, Arial, sans-serif;
 $alt-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   1.1rem;
 $base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.6;
+$small-font-size:  $base-font-size * 0.75;
+$ui-font-size:     $base-font-size * 0.85;
+$base-line-height: 1.75;
 
 $h1-size: $base-font-size * 2.5;
 $h2-size: $base-font-size * 1.8;

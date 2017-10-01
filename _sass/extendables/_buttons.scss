@@ -4,10 +4,11 @@
   color: $black-color;
   display: inline-block;
   font-family: $alt-font-family;
-  font-size: 0.9em;
+  font-size: $ui-font-size;
   font-weight: 600;
+  letter-spacing: 0.05em;
   margin: $spacing-unit / 2 0;
-  padding: $spacing-unit / 3 $spacing-unit / 2;
+  padding: $spacing-unit / 4 $spacing-unit / 2;
   text-transform: uppercase;
 
   &:visited {
