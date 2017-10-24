@@ -1,4 +1,5 @@
 <div class="featured-area">
+	<h1 class="visually-hidden">Side Stories Oy</h1>
 	<h2 class="visually-hidden">Ajankohtaiset projektit</h2>
 
 	{% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "published", "last" | reverse %}
@@ -18,4 +19,23 @@
 
 	{% endfor %}
 
+</div>
+
+{% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "published", "last" | reverse %}
+<div class="featured-grid">
+	{% for project in projects | limit: 2 %}
+
+		{%
+			include blocks/featured.html
+			heading=2
+			fullscreen=false
+			colorize=true
+			theme=project.theme
+			title=project.title
+			description=project.tagline
+			link=project.url
+			liftup_image=project.liftup_image
+		%}
+
+	{% endfor %}
 </div>
