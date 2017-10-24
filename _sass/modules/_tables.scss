@@ -29,3 +29,22 @@ td {
         text-align: center;
     }
 }
+
+table {
+    &.table--pricing {
+        h4, h5, h6 {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0 0 0 $spacing-unit / 2;
+            
+            li {
+                font-size: $ui-font-size;
+                margin: 0;
+                list-style: square;
+            }
+        }
+    }
+}

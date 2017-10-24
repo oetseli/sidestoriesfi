@@ -2,11 +2,16 @@
 layout: default
 ---
 <div class="content">
+    <h1>Vuokraus</h1>
+    <p class="hero">
+        Kysy tarjousta osoitteesta info@sidestories.fi.
+    </p>
+
 {% for group in site.data["rental_groups"] %}
     {% assign rentals = (site.data["rentals"] | where: "group", group[0]) %}
     <h2>{{ group[1] }}</h2>
 
-    <table>
+    <table class="table--pricing">
         <tr>
             {% if group[0] != "bundle" %}
                 <th>Merkki</th>
@@ -22,8 +27,9 @@ layout: default
         {% assign item = rental %}
             {% if item.bundle %}
                 <td colspan="2">
-                    <ul>
                     {% assign bundle = site.data["rental_bundles"][item.bundle] %}
+                    <h4>{{ item.name }}</h3>
+                    <ul>
                     {% for bundle_item_key in bundle %}
                         {% assign bundle_item = site.data["rentals"][bundle_item_key] %}
                         <li>{{ bundle_item.name }} ({{ bundle_item.rate}} €)</li>

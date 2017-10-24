@@ -1,3 +1,6 @@
 bundle_pocket:
-  - "bmpcc"
-  - "promic"
+  - bmpcc
+  - promic
+bundle_cinema:
+  - bmcc
+  - promic
