@@ -14,12 +14,11 @@ layout: default
     <table class="table--pricing">
         <tr>
             {% if group[0] != "bundle" %}
-                <th>Merkki</th>
-                <th>Malli</th>
-                <th>Päivähinta</th>
+                <th colspan="2">Tuote</th>
+                <th class="rental--price">Päivähinta</th>
             {% else %}
-                <th colspan="2">Sisältö</th>
-                <th>Päivähinta</th>
+                <th colspan="2">Setti</th>
+                <th class="rental--price">Päivähinta</th>
             {% endif %}
         </tr>
     {% for rental in rentals %}
@@ -27,17 +26,20 @@ layout: default
         {% assign item = rental %}
             {% if item.bundle %}
                 <td colspan="2">
-                    {% assign bundle = site.data["rental_bundles"][item.bundle] %}
-                    <h4>{{ item.name }}</h3>
+                    <h4>{{ item.name }}</h4>
                     <ul>
+                    {% assign bundle = site.data["rental_bundles"][item.bundle] %}
+                    {% assign bundle_total = 0 %}
                     {% for bundle_item_key in bundle %}
                         {% assign bundle_item = site.data["rentals"][bundle_item_key] %}
-                        <li>{{ bundle_item.name }} ({{ bundle_item.rate}} €)</li>
+                        {% assign bundle_total = bundle_total | plus: bundle_item.rate %}
+                        <li>{{ bundle_item.name }} ({{ bundle_item.rate | replace: ".", "," }} €)</li>
                     {% endfor %}
+                        <li>Alentamaton yhteishinta {{ bundle_total | replace: ".", "," }} €</li>
                     </ul>
                 </td>
             {% else %}
-                <td>{{ item.make }}</td>
+                <td class="rental--make">{{ item.make }}</td>
                 <td>
                     {{ item.name }} 
                     {% if item.extra %}
@@ -45,7 +47,11 @@ layout: default
                     {% endif %}
                 </td>
             {% endif %}
-            <td class="table-cell--center">{{ item.rate }} €</td>
+            <td class="table-cell--center rental--price">
+                {% assign raw_price = item.rate | replace: ".", "," %}
+                {% assign price_components = raw_price | split: "," %}
+                {{ price_components[0] }},<span>{{ price_components[1] }}</span> €
+            </td>
         </tr>
     {% endfor %}
 
