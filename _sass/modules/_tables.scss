@@ -6,10 +6,18 @@ table {
 
 th {
     background: $grey-color-dark;
-    border: 0;
-    border-bottom: $line-stroke-width solid $line-color-strong;
+    border: $line-stroke-width / 2 solid $line-color-strong;
+    border-bottom-width: $line-stroke-width;
     color: $white-color;
     text-transform: uppercase;
+
+    &:first-child {
+        border-left-color: $grey-color-dark;
+    }
+
+    &:last-child {
+        border-right-color: $grey-color-dark;
+    }
 }
 
 td {
@@ -27,5 +35,14 @@ td {
 
     &.table-cell--center {
         text-align: center;
+    }
+
+    h3, h4, h5, h6 {
+        margin-top: 0;
+    }
+
+    ul {
+        margin: $spacing-unit / 4 0;
+        padding: 0 $spacing-unit / 1.5;
     }
 }

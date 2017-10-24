@@ -1,3 +1,4 @@
 bundle_pocket:
   - "bmpcc"
   - "promic"
+  - "pocket_sd"
