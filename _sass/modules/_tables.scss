@@ -5,10 +5,10 @@ table {
 }
 
 th {
-    background: $grey-color-dark;
+    background: $black-color;
     border: 0;
-    border-bottom: $line-stroke-width solid $line-color-strong;
     color: $white-color;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
