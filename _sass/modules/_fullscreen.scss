@@ -140,6 +140,7 @@
   }
 
   &.full-screen-element-disabled {
+    min-height: 24em;
     overflow: hidden;
     position: relative;
 
