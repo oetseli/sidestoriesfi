@@ -21,6 +21,7 @@
 
   .full-screen-content {
     @extend .content;
+    font-weight: 400;
     margin: 0 auto;
     max-width: $content-width;
     padding: $spacing-unit 0;
@@ -140,10 +141,31 @@
   }
 
   &.full-screen-element-disabled {
+    display: flex;
+    min-height: 24em;
     overflow: hidden;
     position: relative;
+    width: 100%;
+
+    a {
+      align-self: stretch;
+      display: inline-flex;
+      width: 100%;
+
+      &:hover,
+      &:focus {
+        .full-screen-background {
+          background: $grey-color-dark;
+
+          &:after {
+            opacity: 0.25;
+          }
+        }
+      }
+    }
 
     .full-screen-content {
+      align-self: center;
       padding: $spacing-unit 0;
     }
 

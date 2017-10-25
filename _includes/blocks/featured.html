@@ -10,6 +10,10 @@
 
 <div class="full-screen-element {{ class }} {{ theme_class }}">
 
+  {% if include.link %}
+    <a href="{{ site.baseurl }}{{ include.link }}">
+  {% endif %}
+
   <div class="full-screen-content content">
     <h{{include.heading}} class="full-screen-element-title">{{ include.title }}</h{{include.heading}}>
     {% if include.description %}
@@ -39,9 +43,6 @@
       {% endif %}
     </div>
 
-    {% if include.link %}
-      <a href="{{ site.baseurl }}{{ include.link }}" class="button button--negative">{{ site.data.i18n["read_more"] }}</a>
-    {% endif %}
   </div>
 
   {% if include.liftup_image %}
@@ -62,5 +63,9 @@
         </div>
       </div>
     {% endif %}
+  {% endif %}
+
+  {% if include.link %}
+    </a>
   {% endif %}
 </div>

@@ -9,6 +9,7 @@ th {
     border: $line-stroke-width / 2 solid $line-color-strong;
     border-bottom-width: $line-stroke-width;
     color: $white-color;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
 
     &:first-child {
@@ -36,13 +37,23 @@ td {
     &.table-cell--center {
         text-align: center;
     }
+}
 
-    h3, h4, h5, h6 {
-        margin-top: 0;
-    }
+table {
+    &.table--pricing {
+        h3, h4, h5, h6 {
+            margin: 0;
+        }
 
-    ul {
-        margin: $spacing-unit / 4 0;
-        padding: 0 $spacing-unit / 1.5;
+        ul {
+            margin: 0;
+            padding: 0 0 0 $spacing-unit / 2;
+            
+            li {
+                font-size: $ui-font-size;
+                margin: 0;
+                list-style: square;
+            }
+        }
     }
 }

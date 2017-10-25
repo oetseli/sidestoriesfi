@@ -1,4 +1,9 @@
 $spacing-unit:   	 $base-font-size * $base-line-height;
+$gap: 0.2em;
 
 // Width of the content area
-$content-width:    50rem;
+$content-width:    60rem;
+$content-wide-width: $content-width * 1.5;
+
+// Grid.
+$grid-column-width: 28em;

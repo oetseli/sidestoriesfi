@@ -8,13 +8,15 @@ category: Dokumentti
 theme: black
 liftup: true
 liftup_image:
-  src: projects/lahja1.jpg
-  alt: "Lähikuva dokumentin päähenkilöstä, Jaanasta."
+  src: galleries/lahja/Lahja_Jaana.jpg
+  alt: "Dokumentin päähenkilö tyttärensä haudalla."
 description: "Lahja on koskettava kertomus äidin ja tyttären erityislaatuisesta suhteesta. Jaana menetti tyttärensä Liisan liikenneonnettomuudessa tämän ollessa 16-vuotias. Lyhyt dokumenttielokuva käsittelee äidin surua sekä tapahtumia ennen ja jälkeen kuoleman, jonka tytär itse ennusti jo vuosia etukäteen."
+tagline: "Tarina tytöstä, joka ennusti kuolemansa"
 crew:
   director: "Otto Heikola"
   producer: "Valtteri Munkki"
   editor: "Anniina Kauttonen"
+gallery: "lahja-gallery"
 ---
 
 ## Projektin tila
