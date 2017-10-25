@@ -1,6 +1,7 @@
 bundle_pocket:
   - bmpcc
   - promic
+  - sd1
 bundle_cinema:
   - bmcc
   - promic

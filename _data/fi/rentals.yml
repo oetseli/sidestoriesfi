@@ -29,3 +29,9 @@ promic:
   name: "VideoMic Pro"
   rate: 15.95
   group: audio
+
+sd1:
+  make: "SanDisk"
+  name: "Extreme 256GB SD"
+  rate: 9.95
+  group: video
