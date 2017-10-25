@@ -37,8 +37,6 @@ layout: default
                     {% endfor %}
                         <li>Alentamaton yhteishinta {{ bundle_total | replace: ".", "," }} €</li>
                     </ul>
-
-                    = {{ bundle_total | replace: ".", "," }} €
                 </td>
             {% else %}
                 <td class="rental--make">{{ item.make }}</td>
