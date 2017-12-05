@@ -13,6 +13,10 @@
     }
   }
 
+  .full-screen-element-title {
+    letter-spacing: 0.25em;
+  }
+
   h1.full-screen-element-title {
     + p {
       @extend .hero;
@@ -21,7 +25,6 @@
 
   .full-screen-content {
     @extend .content;
-    font-weight: 400;
     margin: 0 auto;
     max-width: $content-width;
     padding: $spacing-unit 0;
@@ -107,6 +110,8 @@
     }
   }
 
+  //
+  // Shared styling between active and disabled modes.
   &.full-screen-element-ready,
   &.full-screen-element-disabled {
     .full-screen-background {
@@ -140,6 +145,8 @@
     }
   }
 
+  //
+  // Disabled mode for liftups etc. 
   &.full-screen-element-disabled {
     display: flex;
     min-height: 24em;
@@ -150,6 +157,7 @@
     a {
       align-self: stretch;
       display: inline-flex;
+      font-weight: inherit;
       width: 100%;
 
       &:hover,
@@ -158,9 +166,22 @@
           background: $grey-color-dark;
 
           &:after {
-            opacity: 0.25;
+            opacity: 0.65;
           }
         }
+      }
+    }
+
+    .full-screen-background {
+      background: $black-color;
+
+      & > * {
+        opacity: 0.9;
+      }
+
+      // Colorize only on hover.
+      &.full-screen-background-colorize:after {
+        opacity: 0;
       }
     }
 
@@ -173,6 +194,12 @@
       display: none;
     }
   }
+
+  &.full-screen-element-hero {
+    .full-screen-background {
+      opacity: 0.5;
+    }
+  }
 }
 
 .full-screen-background.full-screen-background-colorize {
@@ -180,7 +207,7 @@
     filter: grayscale(100%);
     
     &:after {
-      background: rgba(10, 10, 10, 0.5);
+      background: rgba(10, 10, 10, 0.85);
       content: ' ';
       height: 100%;
       opacity: 0.65;

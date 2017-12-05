@@ -8,7 +8,7 @@
 		{% assign theme_class = "" %}
 	{% endif %}
 
-	<body class="{{ theme_class }}">
+	<body>
 		<div class="page">
 			{% include header.html %}
 
@@ -18,25 +18,35 @@
 					{%
 						include blocks/featured.html
 						heading=1
-						fullscreen=true
+						fullscreen=false
+						hero=true
 						theme=page.theme
 						colorize=true
 						title=page.title
 						description=page.description
-						published=page.published
-						runtime=page.runtime
-						category=page.category
 						liftup_image=page.liftup_image
 					%}
 				</header>
 
 				<section class="project-meta">
+					{% 
+						include projects/basics.html 
+						published=page.published
+						runtime=page.runtime
+						category=page.category
+					%}
+				</section>
+
+				<section class="project-meta">
 					{% include projects/crew.html %}
 				</section>
 
-				<section class="content content--spaced content--main">
-					{{ content }}
-				</section>
+				{% assign stripped_content = content | strip_newlines %}
+				{% if stripped_content != "" %}
+					<section class="content content--spaced content--main">
+						{{ content }}
+					</section>
+				{% endif %}
 
 				{% if page.trailer %}
 				<section class="trailer">

@@ -20,9 +20,11 @@ nav.main-menu {
 		border: 0;
 		color: $near-white-color;
 		display: block;
+		letter-spacing: 0.1em;
 		line-height: $spacing-unit;
 		margin-top: 0.3rem + ($spacing-unit / 4);
 		padding: $spacing-unit/2 $spacing-unit 0 $spacing-unit/2;
+		font-weight: 300;
 
 		&:after {
 			border-bottom: $line-stroke-width solid transparent;
@@ -56,8 +58,8 @@ nav.main-menu {
 	span {
 		background: $white-color;
 		display: block;
-		height: 4px;
-		margin: 8px 0;
+		height: 2px;
+		margin: 10px 0;
 		transition: 0.25s all;
 	}
 }
@@ -112,6 +114,7 @@ nav.main-menu {
 		display: block;
 		font-family: $alt-font-family;
 		font-size: $h4-size;
+		font-weight: 300;
 		padding: $spacing-unit / 2;
 		text-align: center;
 		text-transform: uppercase;

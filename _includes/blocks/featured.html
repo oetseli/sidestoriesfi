@@ -1,5 +1,9 @@
-{% if include.fullscreen == false %}
+{% if include.fullscreen != true %}
   {% assign class = "full-screen-element-disabled" %}
+{% endif %}
+
+{% if include.hero == true %}
+  {% assign class = class | append: " full-screen-element-hero" %}
 {% endif %}
 
 {% if include.theme %}

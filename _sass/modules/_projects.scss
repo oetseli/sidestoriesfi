@@ -8,10 +8,6 @@
   }
 }
 
-.project--credits {
-  background: $black-color;
-  color: $white-color;
-}
 // .project--credits-title {
 //   display: flex;
 //   margin-left: -$spacing-unit;
@@ -25,35 +21,13 @@
 //     padding: $spacing-unit / 2 $spacing-unit 0 $spacing-unit;
 //   }
 // }
-.project--credits-title {
-  overflow: hidden; // Margin-top forces black background to stretch up.
-  text-align: center;
-
-  h2 {
-    @extend %heading-underline;
-  }
-}
-.project--credits-container {
+.project-meta {
   @extend %container--padded;
 }
-.project--credits-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding-bottom: $spacing-unit;
-}
+
 .project--credit {
-  margin-right: $spacing-unit;
-  text-align: center;
-
-  h4 {
-    @extend %alt-heading;
-    font-size: $h5-size;
-    margin-bottom: 0;
-
-    + p {
-      margin-top: 0;
-    }
+  h5 + p {
+    margin-top: 0;
   }
 }
 .content {

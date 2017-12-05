@@ -1,16 +1,17 @@
 h1, h2, h3, h4, h5, h6 {
 	display: block;
 	font-family: $alt-font-family;
-	font-weight: 800;
+	font-weight: 400;
 	text-transform: uppercase;
 }
 
-h1, h2, h3 {
-	letter-spacing: 0.25em;
+h1, h2 {
+	letter-spacing: 0.1em;
 }
 
 h1 {
 	font-size: $h1-size;
+	font-weight: 300;
 	margin: $spacing-unit * 2 0 $spacing-unit;
 }
 h2 {

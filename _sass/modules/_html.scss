@@ -1,6 +1,6 @@
 html {
 	font-size: 100%;
-	font-size: calc(90% + 0.15vw);
+	font-size: calc(85% + 0.1vw);
 }
 
 body {
@@ -8,6 +8,7 @@ body {
 	color: $text-color;
 	font-size: $base-font-size;
 	font-family: $base-font-family;
+	font-weight: 300;
 	line-height: $base-line-height;
 	margin: 0;
 }

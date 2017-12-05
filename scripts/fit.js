@@ -104,6 +104,7 @@ $.fn.extend({
 });
 
 $(document).ready(function() {
+  return;
   $('.full-screen-element').each(function() {
     var that = this;
     var disabled = $(this).hasClass('full-screen-element-disabled')

@@ -1,18 +1,9 @@
-<div class="project--credits">
-  <div class="project--credits-container">
-    <div class="project--credits-title">
-      <h2>
-        {{ site.data["i18n"]["crew"] }}
-      </h2>
+<div class="meta-fields project--credits meta-fields--centered">
+  {% for credit in page.crew %}
+    <div class="meta-field project--credit">
+      {% assign role = credit[0] %}
+      <h5>{{ site.data["i18n"]["roles"][role] }}</h5>
+      <p>{{ credit[1] }}</p>
     </div>
-    <div class="project--credits-content">
-      {% for credit in page.crew %}
-        <div class="project--credit">
-          {% assign role = credit[0] %}
-          <h4>{{ site.data["i18n"]["roles"][role] }}</h4>
-          <p>{{ credit[1] }}</p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
+  {% endfor %}
 </div>

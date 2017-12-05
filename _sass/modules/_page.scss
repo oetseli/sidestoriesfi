@@ -29,13 +29,14 @@
 	.meta-field {
 		flex-basis: 10rem;
 		margin: 0 $spacing-unit;
+		text-align: center;
 	}
 }
 
 .meta-fields--centered {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 	width: auto;
 }
 
