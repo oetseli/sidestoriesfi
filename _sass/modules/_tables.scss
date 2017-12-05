@@ -5,11 +5,20 @@ table {
 }
 
 th {
-    background: $black-color;
-    border: 0;
+    background: $grey-color-dark;
+    border: $line-stroke-width / 2 solid $line-color-strong;
+    border-bottom-width: $line-stroke-width;
     color: $white-color;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+
+    &:first-child {
+        border-left-color: $grey-color-dark;
+    }
+
+    &:last-child {
+        border-right-color: $grey-color-dark;
+    }
 }
 
 td {
@@ -32,7 +41,7 @@ td {
 
 table {
     &.table--pricing {
-        h4, h5, h6 {
+        h3, h4, h5, h6 {
             margin: 0;
         }
 
