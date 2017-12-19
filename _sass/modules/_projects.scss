@@ -23,6 +23,12 @@
 // }
 .project-meta {
   @extend %container--padded;
+  margin-bottom: $spacing-unit * 2;
+
+  + .project-meta {
+    border-top: 1px solid $line-color;
+    margin-top: -($spacing-unit);
+  }
 }
 
 .project--credit {
@@ -42,6 +48,7 @@
 
 .trailer--content {
   @extend %container--padded;
+  padding-bottom: $spacing-unit * 2;
 
   > h2 {
     margin-top: $spacing-unit / 2;

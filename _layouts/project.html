@@ -64,7 +64,7 @@
 				{% if page.gallery %}
 					<section class="project-gallery">
 						<div class="project-gallery--content">
-							<h2>Galleria</h2>
+							<h2 class="visually-hidden">Galleria</h2>
 							{% assign id = "/galleries/" | append: page.gallery %}
 							{% assign gallery = site.galleries | where: "id", id | first %}
 

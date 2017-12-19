@@ -25,10 +25,12 @@
 
 .meta-fields {
 	margin: $spacing-unit 0;
+	margin-left: -($spacing-unit / 2);
+	width: calc(100% + #{$spacing-unit});
 
 	.meta-field {
 		flex-basis: 10rem;
-		margin: 0 $spacing-unit;
+		margin: 0 $spacing-unit / 2;
 		text-align: center;
 	}
 }
@@ -37,7 +39,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	width: auto;
 }
 
 .featured-area {
