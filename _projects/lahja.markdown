@@ -1,5 +1,6 @@
 ---
 layout: project
+weight: 1
 title:  "Lahja"
 lang: fi
 published: 2017

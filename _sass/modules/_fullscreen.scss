@@ -163,9 +163,9 @@
       &:hover,
       &:focus {
         .full-screen-background {
-          background: $grey-color-dark;
+          background: $black-color;
 
-          &:after {
+          .full-screen-background-css {
             opacity: 0.65;
           }
         }
@@ -198,35 +198,6 @@
   &.full-screen-element-hero {
     .full-screen-background {
       opacity: 0.5;
-    }
-  }
-}
-
-.full-screen-background.full-screen-background-colorize {
-  .theme-black & {
-    filter: grayscale(100%);
-    
-    &:after {
-      background: rgba(10, 10, 10, 0.85);
-      content: ' ';
-      height: 100%;
-      opacity: 0.65;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 1;
-    }
-  }
-  .theme-blue & {    
-    &:after {
-      background: rgba(0, 0, 35, 0.85);
-      content: ' ';
-      height: 100%;
-      opacity: 0.65;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 1;
     }
   }
 }

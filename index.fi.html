@@ -2,7 +2,7 @@
 	<h1 class="visually-hidden">Side Stories Oy</h1>
 	<h2 class="visually-hidden">Ajankohtaiset projektit</h2>
 
-	{% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "published", "last" | reverse %}
+	{% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "weight" %}
 	{% for project in projects | limit: 2 %}
 
 		{%
@@ -21,9 +21,9 @@
 
 </div>
 
-{% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "published", "last" | reverse %}
+{% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "weight" %}
 <div class="featured-grid">
-	{% for project in projects | limit: 2 %}
+	{% for project in projects | limit: 2 | offset: 2 %}
 
 		{%
 			include blocks/featured.html
