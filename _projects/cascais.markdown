@@ -18,4 +18,8 @@ crew:
   color: "Valtteri Munkki"
   editor: "Anniina Kauttonen"
   dop: "Otso Lahti"
+media:
+  video:
+    title: "Musiikkivideo"
+    vimeo: "https://player.vimeo.com/video/199482872"
 ---

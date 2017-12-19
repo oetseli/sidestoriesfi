@@ -26,7 +26,5 @@ data_dir: ./_data
 collections:
   projects:
     output: true
-  videos:
-    output: false
   galleries:
     output: false

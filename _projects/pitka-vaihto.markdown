@@ -20,6 +20,17 @@ crew:
   editor: "Anniina Kauttonen"
   dop: "Otso Lahti"
   sound: "Mikko Heino"
-trailer: "pitka-vaihto-trailer"
+links:
+  imdb:
+    title: "Lisätietoa"
+    text: "IMDB"
+    url: "www.google.fi"
+media: 
+  trailer: 
+    title: "Traileri"
+    vimeo: "https://player.vimeo.com/video/103231410?color=ffcc33"
+  12min:
+    title: "Ensimmäiset 12 minuuttia"
+    vimeo: "https://player.vimeo.com/video/140345429?color=ffcc33"
 gallery: "pitka-vaihto-gallery"
 ---

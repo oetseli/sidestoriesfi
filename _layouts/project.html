@@ -48,15 +48,17 @@
 					</section>
 				{% endif %}
 
-				{% if page.trailer %}
-				<section class="trailer">
-					<div class="trailer--content">
-						<h2>Traileri</h2>
-						{% assign id = "/videos/" | append: page.trailer %}
-						{% assign video = site.videos | where: "id", id | first %}
-						{% assign source = video.vimeo %}
-
-						{% include videos/vimeo.html source=source %}
+				{% if page.media %}
+				<section class="media">
+					<div class="media--content">
+						{% for media in page.media %}
+							{% assign video = media[1] %}
+							<h2>{{ video.title }}</h2>
+							{% if video.vimeo %}
+								{% assign source = video.vimeo %}
+								{% include videos/vimeo.html source=source %}
+							{% endif %}
+						{% endfor %}
 					</div>
 				</section>
 				{% endif %}

@@ -18,4 +18,8 @@ crew:
   producer: "Valtteri Munkki"
   color: "Valtteri Munkki"
   editor: "Anniina Kauttonen"
+media:
+  video:
+    title: "Musiikkivideo"
+    vimeo: "https://player.vimeo.com/video/231214362"
 ---
