@@ -1,6 +1,6 @@
 ---
 layout: project
-weight: 3
+weight: 4
 title:  "Geno"
 lang: fi
 published: 2017
@@ -11,8 +11,8 @@ liftup: true
 liftup_image:
   src: projects/geno_cover.jpg
   alt: "Lähikuva astronautista G-kestävyystestissä."
-description: "Kuvasimme musiikkivideon Sisareen Geno-kappaleelle heidän albumin julkaisun yhteyteen."
-tagline: "Avaruusteemainen musiikkivideo Sisareelle"
+description: "Sisaren musiikkivideo Leaving the Land -albumilta"
+tagline: "Sisaren musiikkivideo Leaving the Land -albumilta"
 crew:
   director: "Otto Heikola"
   producer: "Valtteri Munkki"

@@ -1,6 +1,6 @@
 ---
 layout: project
-weight: 2
+weight: 3
 title:  "Pitkä vaihto"
 lang: fi
 published: 2014
@@ -12,8 +12,8 @@ liftup: true
 liftup_image:
   src: projects/pv_cover.jpg
   alt: "Lähikuva vanhemmasta pelaajasta, joka kuuntelee vieressä istuvan joukkuekaverin keskustelua."
-description: "Pitkä vaihto -dokumenttielokuvassa seurataan II-divisioonassa pelaavaa Haka Hockey -joukkuetta ja sen pelaajia. Osa heistä on nähnyt SM-liigakuviot ja kiertänyt Pohjois-Amerikankin kaukaloita, mutta yksikään ei ole tavoittanut kirkkainta unelmaansa jääkiekkoammattilaisuudesta."
-tagline: "Dokumentti arjesta kaukalossa"
+description: "Dokumenttielokuvassa seurataan II-divisioonassa pelaavaa Haka Hockey -joukkuetta ja sen pelaajia. Osa heistä on nähnyt SM-liigakuviot ja kiertänyt Pohjois-Amerikankin kaukaloita, mutta yksikään ei ole tavoittanut kirkkainta unelmaansa jääkiekkoammattilaisuudesta."
+tagline: "Tarinoita kaukalon arjesta"
 crew:
   director: "Otto Heikola"
   producer: "Valtteri Munkki"
@@ -29,8 +29,5 @@ media:
   trailer: 
     title: "Traileri"
     vimeo: "https://player.vimeo.com/video/103231410?color=ffcc33"
-  12min:
-    title: "Ensimmäiset 12 minuuttia"
-    vimeo: "https://player.vimeo.com/video/140345429?color=ffcc33"
 gallery: "pitka-vaihto-gallery"
 ---

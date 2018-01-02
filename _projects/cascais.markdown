@@ -1,6 +1,6 @@
 ---
 layout: project
-weight: 4
+weight: 5
 title:  "Cascais"
 lang: fi
 published: 2016
@@ -10,8 +10,8 @@ liftup: true
 liftup_image:
   src: projects/cascais_cover.jpg
   alt: "Lähikuva merisotamiehestä tähystämässä kiikarien läpi."
-description: "Mumrunnerin 16mm filmille kuvattu ja arkistokuvaa yhdistävä musiikkivideo."
-tagline: "Mumrunnerin vaaraa käsittelevä musiikkivideo"
+description: "Mumrunnerin musiikkivideo EP-levyltä Gentle Slopes"
+tagline: "Mumrunnerin musiikkivideo EP-levyltä Gentle Slopes"
 crew:
   director: "Otto Heikola"
   producer: "Valtteri Munkki"

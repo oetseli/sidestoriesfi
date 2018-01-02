@@ -3,7 +3,7 @@
 	<h2 class="visually-hidden">Ajankohtaiset projektit</h2>
 
 	{% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "weight" %}
-	{% for project in projects | limit: 2 %}
+	{% for project in projects | limit: 1 %}
 
 		{%
 			include blocks/featured.html
@@ -23,7 +23,7 @@
 
 {% assign projects = site.projects | where: "lang", "fi" | where: "liftup", true | sort: "weight" %}
 <div class="featured-grid">
-	{% for project in projects | limit: 2 | offset: 2 %}
+	{% for project in projects | offset: 1 %}
 
 		{%
 			include blocks/featured.html

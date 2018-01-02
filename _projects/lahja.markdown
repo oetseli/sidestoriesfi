@@ -5,9 +5,9 @@ title:  "Lahja"
 lang: fi
 published: 2017
 categories: movies
-category: Dokumentti
+category: Lyhyt Dokumenttielokuva
+runtime: "21 min"
 status: Jälkituotannossa
-theme: black
 liftup: true
 liftup_image:
   src: galleries/lahja/Lahja_Jaana.jpg
