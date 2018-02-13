@@ -5,20 +5,12 @@ table {
 }
 
 th {
-    background: $grey-color-dark;
     border: $line-stroke-width / 2 solid $line-color-strong;
     border-bottom-width: $line-stroke-width;
-    color: $white-color;
+    border-top: 0;
     letter-spacing: 0.1em;
+    text-align: left;
     text-transform: uppercase;
-
-    &:first-child {
-        border-left-color: $grey-color-dark;
-    }
-
-    &:last-child {
-        border-right-color: $grey-color-dark;
-    }
 }
 
 td {
@@ -36,6 +28,13 @@ td {
 
     &.table-cell--center {
         text-align: center;
+    }
+
+    &:first-child {
+        border-left: 0;
+    }
+    &:last-child {
+        border-right: 0;
     }
 }
 

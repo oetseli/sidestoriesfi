@@ -15,10 +15,10 @@ liftup_image:
 description: "Dokumenttielokuvassa seurataan II-divisioonassa pelaavaa Haka Hockey -joukkuetta ja sen pelaajia. Osa heistä on nähnyt SM-liigakuviot ja kiertänyt Pohjois-Amerikankin kaukaloita, mutta yksikään ei ole tavoittanut kirkkainta unelmaansa jääkiekkoammattilaisuudesta."
 tagline: "Tarinoita kaukalon arjesta"
 crew:
-  director: "Otto Heikola"
+  script_director: "Otto Heikola"
   producer: "Valtteri Munkki"
-  editor: "Anniina Kauttonen"
   dop: "Otso Lahti"
+  editor: "Anniina Kauttonen"
   sound: "Mikko Heino"
 links:
   imdb:

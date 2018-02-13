@@ -15,9 +15,8 @@ tagline: "Mumrunnerin musiikkivideo EP-levyltä Gentle Slopes"
 crew:
   director: "Otto Heikola"
   producer: "Valtteri Munkki"
-  color: "Valtteri Munkki"
-  editor: "Anniina Kauttonen"
   dop: "Otso Lahti"
+  editor: "Anniina Kauttonen"
 media:
   video:
     title: "Musiikkivideo"

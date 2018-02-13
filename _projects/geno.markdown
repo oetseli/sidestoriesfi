@@ -16,7 +16,6 @@ tagline: "Sisaren musiikkivideo Leaving the Land -albumilta"
 crew:
   director: "Otto Heikola"
   producer: "Valtteri Munkki"
-  color: "Valtteri Munkki"
   editor: "Anniina Kauttonen"
 media:
   video:
