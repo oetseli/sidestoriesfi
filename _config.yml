@@ -28,3 +28,21 @@ collections:
     output: true
   galleries:
     output: false
+
+responsive_image:
+  template: _includes/responsive-image.html
+  default_quality: 60
+  # [Optional, Default: []]
+  # An array of resize configuration objects. Each object must contain at least
+  # a `width` value.
+  sizes:
+    - width: 1920
+      quality: 40
+    - width: 1440
+      quality: 50
+    - width: 1024
+    - width: 800
+    - width: 480
+    - width: 280
+    - width: 32
+      quality: 20

@@ -63,8 +63,12 @@
       </div>
     {% else %}
       <div class="full-screen-background {{ colorize_class }}">
-        <div class="full-screen-background-css" style="background-image: url({{ site.baseurl }}/images/{{ include.liftup_image.src }})">
-        </div>
+        {% responsive_image_block %}
+          path: images/{{ include.liftup_image.src }}
+          alt: {{ include.liftup_image.alt }}
+          template: _includes/responsive-image-bg.html
+          max_width: 1280
+        {% endresponsive_image_block %}
       </div>
     {% endif %}
   {% endif %}

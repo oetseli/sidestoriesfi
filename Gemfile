@@ -13,6 +13,7 @@ gem "jekyll", "3.2.1"
 
 group :jekyll_plugins do
   gem 'jekyll-polyglot'
+  gem 'jekyll-responsive-image'
 end
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
