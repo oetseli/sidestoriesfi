@@ -8,7 +8,7 @@ category: Documentary
 runtime: "1 h 13 min"
 theme: blue
 liftup_image:
-  src: projects/pv1.jpg
+  src: projects/pitka-vaihto/pitka_vaihto_1_numppa.jpg
   alt: "Closeup of an older player who listens to his fellow team member next to him talking."
 description: "A small town ice hockey team fights through their first season in an upper division. The players' dreams might have changed from childhood but their love for the sport does not fade."
 crew:

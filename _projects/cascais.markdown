@@ -6,19 +6,26 @@ lang: fi
 published: 2016
 categories: music_video
 category: Musiikkivideo
+runtime: "3 min"
+
 liftup: true
 liftup_image:
-  src: projects/cascais_cover.jpg
-  alt: "Lähikuva merisotamiehestä tähystämässä kiikarien läpi."
-description: "Mumrunnerin musiikkivideo EP-levyltä Gentle Slopes"
-tagline: "Mumrunnerin musiikkivideo EP-levyltä Gentle Slopes"
+  src: projects/cascais/cascais_1_laivat.jpg
+  alt: "Sotalaivoja kaukaisuudessa."
+
+description: "Yhtyeen inspiraatio kappaleeseen oli peräisin tapahtumista, joissa lapsellinen käytös johti tragediaan. Musiikkivideossa päätimme tehdä jotakin temaattisesti samankaltaista, mutta paljon suuremmassa mittakaavassa: päädyimme toisen maailmansodan väkivaltaisiin tapahtumiin, joissa bändi sulautuu osaksi toimintaa."
+tagline: "Musiikkivideo Mumrunnerin EP:ltä Gentle Slopes"
+
 crew:
   director: "Otto Heikola"
   producer: "Valtteri Munkki"
   dop: "Otso Lahti"
-  editor: "Anniina Kauttonen"
+  editor: "Otto Heikola & Anniina Kauttonen"
+
 media:
   video:
     title: "Musiikkivideo"
     vimeo: "https://player.vimeo.com/video/199482872"
+
+gallery: "cascais-gallery"
 ---
