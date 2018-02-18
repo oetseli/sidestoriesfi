@@ -156,6 +156,7 @@
 
     a {
       align-self: stretch;
+      border: 0;
       display: inline-flex;
       font-weight: inherit;
       width: 100%;
@@ -165,8 +166,8 @@
         .full-screen-background {
           background: $black-color;
 
-          .full-screen-background-css {
-            opacity: 0.65;
+          .background-image {
+            opacity: 0.35;
           }
         }
       }
