@@ -154,6 +154,12 @@
     position: relative;
     width: 100%;
 
+    .post--project & {
+      @media all and (min-width: $lg-width) {
+        min-height: 34em;
+      }
+    }
+
     a {
       align-self: stretch;
       border: 0;

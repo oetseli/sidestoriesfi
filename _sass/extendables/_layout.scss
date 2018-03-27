@@ -18,6 +18,11 @@
     width: 90%;
   }
 }
+%container--wide {
+  @extend %container;
+  width: 90%;
+  max-width: $content-wide-width;
+}
 
 %clearfix {
   &:after {

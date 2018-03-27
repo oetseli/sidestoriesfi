@@ -5,8 +5,10 @@ title:  "Pitkä vaihto"
 lang: fi
 published: 2014
 categories: movies
-category: Dokumentti
+category: Dokumenttielokuva
 runtime: "1 h 13 min"
+
+watch: "https://elisaviihde.fi/vuokraamo/elokuva/80369/pitka-vaihto"
 
 liftup: true
 liftup_image:

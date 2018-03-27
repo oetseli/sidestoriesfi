@@ -24,6 +24,7 @@
 }
 
 %button--negative {
+  border: 0.05em solid currentColor;
   color: $white-color;
 
 	&:hover,
@@ -48,4 +49,8 @@
     background: none;
     color: currentColor;
   }
+}
+
+%button--big {
+  font-size: $h4-size;
 }

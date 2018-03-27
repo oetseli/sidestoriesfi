@@ -17,7 +17,7 @@ gem:
 - jekyll-autoprefixer
 
 # Polyglot config.
-languages: ["fi", "en"]
+languages: ["fi"]
 default_lang: "fi"
 exclude_from_localization: ["javascript", "images", "css"]
 parallel_localization: true

@@ -22,12 +22,16 @@
 //   }
 // }
 .project-meta {
-  @extend %container--padded;
+  @extend %container--wide;
   margin-bottom: $spacing-unit * 2;
 
   + .project-meta {
     border-top: 1px solid $line-color;
     margin-top: -($spacing-unit);
+  }
+
+  @media all and (min-width: $lg-width) {
+    padding: $spacing-unit 0;
   }
 }
 
