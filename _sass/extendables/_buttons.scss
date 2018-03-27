@@ -54,3 +54,9 @@
 %button--big {
   font-size: $h4-size;
 }
+
+// Remove HTML button styling.
+%no-button {
+  background: none;
+  border: 0;
+}

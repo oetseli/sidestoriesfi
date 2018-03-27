@@ -1,10 +1,4 @@
 .full-screen-element {
-  .header--bar + &,
-  .header--bar + article > &:first-child,
-  .header--bar + article > header > & {
-    margin-top: -$spacing-unit*4;
-  }
-
   .full-screen-background {
     background: $black-color;
 
@@ -183,7 +177,7 @@
       background: $black-color;
 
       & > * {
-        opacity: 0.9;
+        opacity: 1;
       }
 
       // Colorize only on hover.
