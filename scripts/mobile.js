@@ -14,11 +14,11 @@ $(document).ready(function() {
 	var mobileActive = false;
 	var resize = function() {
 		if ($(window).width() < 767 && !mobileActive) {
-			$target.addClass('mobile-menu--active');
+			$target.parent().addClass('mobile-menu--active');
 			mobileActive = true;
 		}
 		if ($(window).width() >= 767 && mobileActive) {
-			$target.removeClass('mobile-menu--active');
+			$target.parent().removeClass('mobile-menu--active');
 			mobileActive = false;
 		}
 	};

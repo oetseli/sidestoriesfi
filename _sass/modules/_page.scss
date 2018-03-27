@@ -10,7 +10,6 @@
 	padding-top: $spacing-unit;
 }
 
-
 .hero {
 	font-size: $big-font-size;
 	margin-bottom: $spacing-unit * 2;
@@ -62,7 +61,6 @@
 	.header--bar + &,
 	.header--bar + article > &:first-child {
 		padding-top: 0;
-		margin-top: -$spacing-unit*4;
 	}
 
 	.full-screen-element {
@@ -122,5 +120,17 @@ article .content--main {
 	a {
 		border: 0;
 		text-decoration: none;
+	}
+}
+
+.post--page {
+	margin-top: $spacing-unit * 4;
+
+	section {
+		@extend %container--padded;
+	}
+
+	.mobile-menu--active ~ & {
+		margin-top: 0;
 	}
 }
