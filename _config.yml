@@ -31,18 +31,17 @@ collections:
 
 responsive_image:
   template: _includes/responsive-image.html
-  default_quality: 60
+  default_quality: 75
   # [Optional, Default: []]
   # An array of resize configuration objects. Each object must contain at least
   # a `width` value.
   sizes:
     - width: 1920
-      quality: 40
+      quality: 75
     - width: 1440
-      quality: 50
+      quality: 75
     - width: 1024
     - width: 800
     - width: 480
     - width: 280
     - width: 32
-      quality: 20
