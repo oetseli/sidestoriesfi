@@ -255,7 +255,6 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll
   jekyll-autoprefixer
   jekyll-polyglot
   jekyll-responsive-image

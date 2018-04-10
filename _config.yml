@@ -13,8 +13,10 @@ twitter_username: sidestoriesfi
 markdown: kramdown
 theme: minima
 
-gem:
+plugins:
 - jekyll-autoprefixer
+- jekyll-polyglot
+- jekyll-responsive-image
 
 # Polyglot config.
 languages: ["fi"]
