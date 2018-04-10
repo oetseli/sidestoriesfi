@@ -11,9 +11,8 @@ ruby RUBY_VERSION
 # Happy Jekylling!
 gem "jekyll"
 
-gem 'github-pages'
-
 group :jekyll_plugins do
+  gem 'github-pages'
   gem 'jekyll-polyglot'
   gem 'jekyll-responsive-image'
 end
