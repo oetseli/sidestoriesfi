@@ -1,5 +1,5 @@
 .team {
     display: grid;
     grid-gap: $spacing-unit;
-    grid-template-columns: repeat(auto-fill, minmax($content-width / 3, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax($content-width / 2.5, 1fr));
 }
