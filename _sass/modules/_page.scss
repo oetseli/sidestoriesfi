@@ -112,21 +112,32 @@ article .content--main {
 	width: 100%;
 
 	> li {
-		margin: $spacing-unit;
 		margin-top: 0;
-		width: $h1-size;
 	}
 
 	a {
 		border: 0;
+		box-sizing: content-box;
+		display: block;
+		padding: $spacing-unit;
 		text-decoration: none;
+		width: $h1-size;
+
+		&:hover,
+		&:focus {
+			svg {
+				path {
+					fill: $brand-color;
+				}
+			}
+		}
 	}
 }
 
 .post--page {
 	margin-top: $spacing-unit * 4;
 
-	section {
+	> section {
 		@extend %container--padded;
 	}
 
