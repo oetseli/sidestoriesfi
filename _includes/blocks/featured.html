@@ -47,6 +47,14 @@
       {% endif %}
     </div>
 
+    {% if include.watch %}
+      <div class="featured--watch">
+        <a href="{{ include.watch }}" class="button button--negative button--big">
+          Katso
+        </a>
+      </div>
+    {% endif %}
+
   </div>
 
   {% if include.liftup_image %}

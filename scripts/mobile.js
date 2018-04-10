@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var $target = $menu.parent().parent();
 	var $menuContent = $menu.html();
 
-	var $toggler = $('<span class="mobile-menu--toggler"><span></span><span></span></span>');
+	var $toggler = $('<button class="mobile-menu--toggler"><div class="visually-hidden">Toggle menu</div><div role="presentation" aria-hidden="true"><span></span><span></span></div></button>');
 	var $drawer = $('<div class="mobile-menu--drawer"></div>');
 	var $overlay = $('<div class="mobile-menu--overlay"></div>');
 	$drawer.append($menuContent);
@@ -14,20 +14,36 @@ $(document).ready(function() {
 	var mobileActive = false;
 	var resize = function() {
 		if ($(window).width() < 767 && !mobileActive) {
-			$target.addClass('mobile-menu--active');
+			$target.parent().addClass('mobile-menu--active');
 			mobileActive = true;
 		}
 		if ($(window).width() >= 767 && mobileActive) {
-			$target.removeClass('mobile-menu--active');
+			$target.parent().removeClass('mobile-menu--active');
 			mobileActive = false;
 		}
 	};
 
-	$toggler.click(function() {
-		var state = $target.hasClass('mobile-menu--open');
+	var toggleMenu = function(state, force) {
+		var currentState = $target.hasClass('mobile-menu--open');
+		if (state == undefined) {
+			state = !currentState;
+		}
 
-		$target.toggleClass('mobile-menu--open', !state);
-		$('body').toggleClass('mobile-menu--open', !state);
+		if (state != currentState || force) {
+			$target.toggleClass('mobile-menu--open', state);
+			$('body').toggleClass('mobile-menu--open', state);
+		}
+	}
+
+	$toggler.click(function() {
+		toggleMenu();
+	});
+	
+	$('ul a', $target).focus(function() {
+		toggleMenu(true);
+	});
+	$('ul a', $target).focusout(function(e) {
+		toggleMenu(false);
 	});
 
 	resize();

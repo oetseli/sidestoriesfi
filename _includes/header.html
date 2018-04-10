@@ -11,12 +11,6 @@
 			</div>
 
 			{% include menu.html %}
-
-			<div class="language-switcher">
-				{% for tongue in site.languages %}
-					<a {% if tongue == site.active_lang %} class="active" {% endif %} href="{% if tongue == site.default_lang %} {{site.baseurl}}/ {% else %} {{site.baseurl}}/{{ tongue }} {% endif %}">{{ tongue }}</a>
-			  {% endfor %}
-			</div>
 		</div>
 	</div>
 </div>

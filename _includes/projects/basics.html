@@ -1,20 +1,17 @@
 <div class="meta-fields meta-fields--centered">
     {% if include.published %}
         <div class="meta-field">
-            <h4>{{ site.data["i18n"]["year"] }}</h4>
-            <p>{{ include.published }}</p>
+            <p class="h4">{{ include.published }}</p>
         </div>
     {% endif %}
     {% if include.runtime %}
         <div class="meta-field">
-            <h4>{{ site.data["i18n"]["running_time"] }}</h4>
-            <p>{{ include.runtime }}</p>
+            <p class="h4">{{ include.runtime }}</p>
         </div>
     {% endif %}
     {% if include.category %}
         <div class="meta-field">
-            <h4>{{ site.data["i18n"]["category"] }}</h4>
-            <p>{{ include.category }}</p>
+            <p class="h4">{{ include.category }}</p>
         </div>
     {% endif %}
 </div>

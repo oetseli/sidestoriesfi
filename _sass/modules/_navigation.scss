@@ -48,6 +48,7 @@ nav.main-menu {
 }
 
 .mobile-menu--toggler {
+	@extend %no-button;
 	box-sizing: content-box;
 	cursor: pointer;
 	padding: $spacing-unit;
