@@ -118,13 +118,27 @@ article .content--main {
 	a {
 		border: 0;
 		box-sizing: content-box;
+		color: $text-color;
 		display: block;
+		font-family: $alt-font-family;
+		font-size: $h1-size;
+		font-weight: 400;
+		line-height: 0.9;
+		margin: 0;
 		padding: $spacing-unit;
 		text-decoration: none;
 		width: $h1-size;
 
+		svg {
+			path {
+				fill: $text-color;
+			}
+		}
+
 		&:hover,
 		&:focus {
+			color: $brand-color;
+
 			svg {
 				path {
 					fill: $brand-color;
