@@ -1,0 +1,161 @@
+.content {
+	@extend %container;
+
+	.full-screen-element-ready + & {
+		margin-top: $spacing-unit * 2;
+	}
+}
+.content--spaced {
+	padding-bottom: $spacing-unit;
+	padding-top: $spacing-unit;
+}
+
+.hero {
+	font-size: $big-font-size;
+	margin-bottom: $spacing-unit * 2;
+	margin-top: 0;
+}
+
+.footer {
+	background: $near-white-color;
+	padding: $spacing-unit*2 0;
+	text-align: center;
+}
+
+.meta-fields {
+	margin: $spacing-unit 0;
+	margin-left: -($spacing-unit / 2);
+	width: calc(100% + #{$spacing-unit});
+
+	.meta-field {
+		flex-basis: 10rem;
+		flex-grow: 1;
+		margin: 0 $spacing-unit / 2;
+		text-align: center;
+	}
+}
+
+.meta-fields--centered {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.featured-area {
+	@extend %negative-container;
+	background: none;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $content-wide-width;
+	padding: $spacing-unit * 2 0 0 0;
+
+	> h2 {
+		@extend %container--padded;
+		@extend %heading-underline;
+		text-align: center;
+	}
+
+	.header--bar + &,
+	.header--bar + article > &:first-child {
+		padding-top: 0;
+	}
+
+	.full-screen-element {
+		margin-bottom: $gap;
+		width: 100%;
+	}
+
+	.button {
+		text-align: center;
+	}
+}
+
+.featured-grid {
+	@extend %negative-container;
+	background: none;
+	display: grid;
+	grid-gap: $gap;
+	grid-template-columns: repeat(auto-fill, minmax($grid-column-width, auto));
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $content-wide-width;
+	padding: 0;
+}
+
+article .content--main {
+	hyphens: auto;
+
+	@media all and (min-width: $lg-width) {
+		text-align: justify;
+	}
+
+	h2, h3, h4 {
+		text-align: center;
+	}
+}
+
+
+.featured--watch {
+	display: inline-block;
+}
+
+
+.list--icons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	width: 100%;
+
+	> li {
+		margin-top: 0;
+	}
+
+	a {
+		border: 0;
+		box-sizing: content-box;
+		color: $text-color;
+		display: block;
+		font-family: $alt-font-family;
+		font-size: $h1-size;
+		font-weight: 400;
+		line-height: 0.9;
+		margin: 0;
+		padding: $spacing-unit;
+		text-decoration: none;
+		width: $h1-size;
+
+		svg {
+			path {
+				fill: $text-color;
+			}
+		}
+
+		&:hover,
+		&:focus {
+			color: $brand-color;
+
+			svg {
+				path {
+					fill: $brand-color;
+				}
+			}
+		}
+	}
+}
+
+.post--page {
+	margin-top: $spacing-unit * 4;
+
+	> section {
+		@extend %container--padded;
+	}
+
+	.mobile-menu--active ~ & {
+		margin-top: 0;
+	}
+}

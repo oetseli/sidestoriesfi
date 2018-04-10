@@ -1,30 +1,18 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/main.css">
-		{% include head.html %}
-		{% include meta.html %}
-	</head>
+<html lang="{{ site.active_lang }}">
+	{% include bootstrap/head.html %}
 	<body>
 		<div class="page">
-			<div class="header">
-				<div class="logo">
-					<span class="visually-hidden">Side Stories Oy</span>
-					<div class="svg" aria-hidden="true">
-						{% include logo.svg %}
-					</div>
+			{% include header.html %}
+
+			{{ content }}
+
+			<div class="footer">
+				<div class="content">
+					{% include footer.html %}
 				</div>
 			</div>
-
-			<div class="content">
-				{{ content }}
-			</div>
 		</div>
-		{% include scripts.html %}
+		{% include bootstrap/scripts.html %}
 	</body>
 </html>

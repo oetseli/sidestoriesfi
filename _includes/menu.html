@@ -1,0 +1,9 @@
+{% if site.data["menu"] | size > 0 %}
+<nav class="main-menu">
+	<ul>
+		{% for link in site.data["menu"] %}
+			<li><a href="/{{ site.baseurl }}{{ link[0] }}">{{ link[1] }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>
+{% endif %}

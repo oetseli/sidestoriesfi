@@ -1,0 +1,14 @@
+$text-color:					#3a3a3a;
+$background-color:		#fdfdfd;
+$brand-color:					#2a7ae2;
+
+$black-color:					#000;
+$white-color:					#fff;
+$near-black-color:    #1a1a1a;
+$near-white-color:		#eaeaea;
+$grey-color:					#828282;
+$grey-color-light:		lighten($grey-color, 25%);
+$grey-color-dark:			darken($grey-color, 25%);
+
+$line-color: $grey-color-light;
+$line-color-strong: $grey-color;

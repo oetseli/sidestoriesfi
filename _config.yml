@@ -1,22 +1,10 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Side Stories
 email: info@sidestories.fi
-description: > # this means to ignore newlines until "baseurl:"
-  Helsinki based film production company focusing on shorts and docs.
+description:
+  fi: >
+    Helsingissä toimiva lyhytelokuviin ja dokumentteihin erikoistunut tuotantoyhtiö
+  en: > # this means to ignore newlines until "baseurl:"
+    Helsinki based film production company focusing on shorts and docs
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.sidestories.fi" # the base hostname & protocol for your site
 twitter_username: sidestoriesfi
@@ -24,3 +12,36 @@ twitter_username: sidestoriesfi
 # Build settings
 markdown: kramdown
 theme: minima
+
+gem:
+- jekyll-autoprefixer
+
+# Polyglot config.
+languages: ["fi"]
+default_lang: "fi"
+exclude_from_localization: ["javascript", "images", "css"]
+parallel_localization: true
+data_dir: ./_data
+
+collections:
+  projects:
+    output: true
+  galleries:
+    output: false
+
+responsive_image:
+  template: _includes/responsive-image.html
+  default_quality: 75
+  # [Optional, Default: []]
+  # An array of resize configuration objects. Each object must contain at least
+  # a `width` value.
+  sizes:
+    - width: 1920
+      quality: 75
+    - width: 1440
+      quality: 75
+    - width: 1024
+    - width: 800
+    - width: 480
+    - width: 280
+    - width: 32

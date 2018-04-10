@@ -1,0 +1,12 @@
+crew: "Crew"
+year: "Year"
+running_time: "Running Time"
+category: "Genre"
+roles:
+  director: "Director"
+  producer: "Producer"
+  editor: "Editor"
+  dop: "DoP"
+  sound: "Sound"
+
+read_more: "Read More"

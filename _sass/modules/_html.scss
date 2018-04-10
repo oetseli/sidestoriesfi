@@ -1,0 +1,47 @@
+html {
+	font-size: 100%;
+	font-size: calc(85% + 0.1vw);
+}
+
+body {
+	background: $near-white-color;
+	color: $text-color;
+	font-size: $base-font-size;
+	font-family: $base-font-family;
+	font-weight: 300;
+	line-height: $base-line-height;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+svg {
+	max-width: 100%;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+a,
+a:visited {
+	border-bottom: 0.05em solid lighten($brand-color, 25%);
+	color: $brand-color;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	border-color: lighten($brand-color, 35%);
+	color: lighten($brand-color, 25%);
+}

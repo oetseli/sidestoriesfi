@@ -1,0 +1,9 @@
+<div class="meta-fields project--credits meta-fields--centered">
+  {% for credit in page.crew %}
+    <div class="meta-field project--credit">
+      {% assign role = credit[0] %}
+      <h5>{{ site.data["i18n"]["roles"][role] }}</h5>
+      <p>{{ credit[1] }}</p>
+    </div>
+  {% endfor %}
+</div>

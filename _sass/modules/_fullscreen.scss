@@ -1,0 +1,204 @@
+.full-screen-element {
+  .full-screen-background {
+    background: $black-color;
+
+    & > * {
+      opacity: 0.33;
+    }
+  }
+
+  .full-screen-element-title {
+    letter-spacing: 0.25em;
+  }
+
+  h1.full-screen-element-title {
+    + p {
+      @extend .hero;
+    }
+  }
+
+  .full-screen-content {
+    @extend .content;
+    margin: 0 auto;
+    max-width: $content-width;
+    padding: $spacing-unit 0;
+    text-align: center;
+
+    @media all and (min-width: $lg-width) {
+      padding: $spacing-unit * 3 0;
+    }
+  }
+
+  &.first-full-screen {
+    .full-screen-content {
+      padding-bottom: $spacing-unit * 3;
+    }
+
+    .full-screen-helper {
+      bottom: 0;
+      color: $white-color;
+      cursor: pointer;
+      display: block;
+      font-size: $h1-size;
+      padding: $spacing-unit 0;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      z-index: 3;
+
+      &:after {
+        content: '\2193'; // Downwards arrow.
+      }
+    }
+  }
+
+  .full-screen-background-toggler {
+    color: $white-color;
+    cursor: pointer;
+    right: $spacing-unit;
+    position: absolute;
+    top: $spacing-unit;
+    z-index: 999;
+
+    @media all and (max-width: $sm-width-max) {
+      display: none;
+    }
+  }
+  &.full-screen-element-ready {
+    .full-screen-content {
+      transition: all 0.5s;
+    }
+    .full-screen-background {
+      transition: all 0.25s;
+      transition-delay: 0.1s;
+
+      > * {
+        transition: all 0.25s;
+      }
+    }
+
+    // Reverse colorize effect transition order.
+    &.full-screen-background-visible {
+      .full-screen-background {
+        transition-delay: 0s;
+
+        > * {
+          transition-delay: 0.1s;
+        }
+      }
+    }
+  }
+
+  &.full-screen-background-visible {
+    .full-screen-content {
+      //filter: blur(10px);
+      opacity: 0;
+    }
+    .full-screen-background {
+      filter: none !important;
+
+      > * {
+        filter: none !important;
+        opacity: 1;
+      }
+    }
+  }
+
+  //
+  // Shared styling between active and disabled modes.
+  &.full-screen-element-ready,
+  &.full-screen-element-disabled {
+    .full-screen-background {
+      height: 100%;
+      left: 0;
+      width: 100%;
+      position: absolute;
+      top: 0;
+
+      img {
+        width: 100%;
+      }
+
+      .background-image {
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+    }
+
+    .full-screen-content {
+      color: $white-color;
+      position: relative;
+      z-index: 2;
+
+      a.button {
+        @extend a.button--negative;
+      }
+    }
+  }
+
+  //
+  // Disabled mode for liftups etc. 
+  &.full-screen-element-disabled {
+    display: flex;
+    min-height: 24em;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .post--project & {
+      @media all and (min-width: $lg-width) {
+        min-height: 34em;
+      }
+    }
+
+    a {
+      align-self: stretch;
+      border: 0;
+      display: inline-flex;
+      font-weight: inherit;
+      width: 100%;
+
+      &:hover,
+      &:focus {
+        .full-screen-background {
+          background: $black-color;
+
+          .background-image {
+            opacity: 0.35;
+          }
+        }
+      }
+    }
+
+    .full-screen-background {
+      background: $black-color;
+
+      & > * {
+        opacity: 0.875;
+      }
+
+      // Colorize only on hover.
+      &.full-screen-background-colorize:after {
+        opacity: 0;
+      }
+    }
+
+    .full-screen-content {
+      align-self: center;
+      padding: $spacing-unit 0;
+    }
+
+    .full-screen-helper {
+      display: none;
+    }
+  }
+
+  &.full-screen-element-hero {
+    .full-screen-background {
+      opacity: 0.5;
+    }
+  }
+}

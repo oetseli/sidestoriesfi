@@ -1,0 +1,17 @@
+<div class="meta-fields meta-fields--centered">
+    {% if include.published %}
+        <div class="meta-field">
+            <p class="h4">{{ include.published }}</p>
+        </div>
+    {% endif %}
+    {% if include.runtime %}
+        <div class="meta-field">
+            <p class="h4">{{ include.runtime }}</p>
+        </div>
+    {% endif %}
+    {% if include.category %}
+        <div class="meta-field">
+            <p class="h4">{{ include.category }}</p>
+        </div>
+    {% endif %}
+</div>

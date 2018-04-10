@@ -11,8 +11,15 @@ ruby RUBY_VERSION
 # Happy Jekylling!
 gem "jekyll", "3.2.1"
 
+group :jekyll_plugins do
+  gem 'jekyll-polyglot'
+  gem 'jekyll-responsive-image'
+end
+
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima"
+
+gem "jekyll-autoprefixer"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.

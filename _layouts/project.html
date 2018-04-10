@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="{{ site.activelang }}">
+	{% include bootstrap/head.html %}
+
+	{% if page.theme %}
+		{% assign theme_class = "theme-" | append: page.theme %}
+	{% else %}
+		{% assign theme_class = "" %}
+	{% endif %}
+
+	<body>
+		<div class="page">
+			{% include header.html %}
+
+			<article class="post--project {{ theme_class }}">
+
+				<header>
+					{%
+						include blocks/featured.html
+						heading=1
+						fullscreen=false
+						hero=true
+						theme=page.theme
+						colorize=true
+						title=page.title
+						description=page.description
+						liftup_image=page.liftup_image
+						watch=page.watch
+					%}
+				</header>
+
+				<section class="project-meta">
+					{% 
+						include projects/basics.html 
+						published=page.published
+						runtime=page.runtime
+						category=page.category
+					%}
+				</section>
+
+				<section class="project-meta">
+					{% include projects/crew.html %}
+				</section>
+
+				{% assign stripped_content = content | strip_newlines %}
+				{% if stripped_content != "" %}
+					<section class="content content--spaced content--main">
+						{{ content }}
+					</section>
+				{% endif %}
+
+				{% if page.media %}
+				<section class="media">
+					<div class="media--content">
+						{% for media in page.media %}
+							{% assign video = media[1] %}
+							<h2>{{ video.title }}</h2>
+							{% if video.vimeo %}
+								{% assign source = video.vimeo %}
+								{% include videos/vimeo.html source=source %}
+							{% endif %}
+						{% endfor %}
+					</div>
+				</section>
+				{% endif %}
+
+				{% if page.gallery %}
+					<section class="project-gallery">
+						<div class="project-gallery--content">
+							<h2 class="visually-hidden">Galleria</h2>
+							{% assign id = "/galleries/" | append: page.gallery %}
+							{% assign gallery = site.galleries | where: "id", id | first %}
+
+							{% include blocks/gallery.html gallery=gallery %}
+						</div>
+					</section>
+				{% endif %}
+
+			</article>
+
+			<footer class="footer">
+				<div class="content">
+					{% include footer.html %}
+				</div>
+			</footer>
+
+		</div>
+		{% include bootstrap/scripts.html %}
+	</body>
+</html>

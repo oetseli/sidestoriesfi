@@ -1,0 +1,62 @@
+%button {
+  border: $line-stroke-width solid currentColor;
+  border-radius: $default-border-radius;
+  color: $black-color;
+  display: inline-block;
+  font-family: $alt-font-family;
+  font-size: $ui-font-size;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: $spacing-unit / 2 0;
+  padding: $spacing-unit / 4 $spacing-unit / 2;
+  text-transform: uppercase;
+
+  &:visited {
+    border-bottom: currentColor;
+    color: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    background: $black-color;
+    color: $white-color;
+  }
+}
+
+%button--negative {
+  border: 0.05em solid currentColor;
+  color: $white-color;
+
+	&:hover,
+	&:focus {
+		background: $white-color;
+		border-color: $white-color;
+		color: $black-color;
+	}
+}
+
+%button--subtle {
+  border-bottom-color: transparent;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+  &:hover,
+  &:focus {
+    background: none;
+    color: currentColor;
+  }
+}
+
+%button--big {
+  font-size: $h4-size;
+}
+
+// Remove HTML button styling.
+%no-button {
+  background: none;
+  border: 0;
+}

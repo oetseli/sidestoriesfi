@@ -1,0 +1,137 @@
+nav.main-menu {
+	align-self: flex-end;
+	font-family: $alt-font-family;
+	font-size: $h4-size;
+	text-transform: uppercase;
+
+	ul {
+		align-items: flex-end;
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: 0 $spacing-unit/4;
+		}
+	}
+
+	a, a:visited {
+		border: 0;
+		color: $near-white-color;
+		display: block;
+		letter-spacing: 0.1em;
+		line-height: $spacing-unit;
+		margin-top: 0.3rem + ($spacing-unit / 4);
+		padding: $spacing-unit/2 $spacing-unit 0 $spacing-unit/2;
+		font-weight: 300;
+
+		&:after {
+			border-bottom: $line-stroke-width solid transparent;
+			content: ' ';
+			display: block;
+			margin-top: $spacing-unit / 2;
+		}
+	}
+
+	a:hover,
+	a:focus {
+		&:after {
+			border-bottom-color: currentColor;
+		}
+	}
+}
+
+.mobile-menu--toggler,
+.mobile-menu--drawer {
+	display: none;
+}
+
+.mobile-menu--toggler {
+	@extend %no-button;
+	box-sizing: content-box;
+	cursor: pointer;
+	padding: $spacing-unit;
+	position: relative;
+	width: 2rem;
+	z-index: 99999;
+
+	span {
+		background: $white-color;
+		display: block;
+		height: 2px;
+		margin: 10px 0;
+		transition: 0.25s all;
+	}
+}
+
+.mobile-menu--active {
+	.mobile-menu--drawer {
+		display: block;
+	}
+	.mobile-menu--toggler {
+		display: block;
+	}
+	.main-menu {
+		display: none;
+	}
+}
+
+.mobile-menu--open {
+	.mobile-menu--drawer {
+		transform: translateY(0%);
+	}
+	.mobile-menu--toggler {
+		span {
+			transform: rotate(-45deg) translate(-4px, 4px);
+
+			+ span {
+				transform: rotate(45deg) translate(-4px, -4px);
+			}
+		}
+	}
+}
+
+.mobile-menu--drawer {
+	background: $black-color;
+	left: 0;
+	position: absolute;
+	top: 100%;
+	transform: translateY(-150%);
+	transition: transform 0.25s;
+	width: 100%;
+	z-index: 9999;
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		padding-bottom: $spacing-unit;
+	}
+
+	a {
+		border: 0;
+		color: $white-color;
+		display: block;
+		font-family: $alt-font-family;
+		font-size: $h4-size;
+		font-weight: 300;
+		padding: $spacing-unit / 2;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:after {
+			border-bottom: 1px solid $white-color;
+			content: ' ';
+			display: block;
+			width: 0;
+		}
+
+		&:hover,
+		&:focus {
+			&:after {
+				//width: 100%;
+			}
+		}
+	}
+}

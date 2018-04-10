@@ -1,0 +1,87 @@
+{% if include.fullscreen != true %}
+  {% assign class = "full-screen-element-disabled" %}
+{% endif %}
+
+{% if include.hero == true %}
+  {% assign class = class | append: " full-screen-element-hero" %}
+{% endif %}
+
+{% if include.theme %}
+  {% assign theme_class = "theme-" | append: include.theme %}
+{% else %}
+  {% assign theme_class = "" %}
+{% endif %}
+
+<div class="full-screen-element {{ class }} {{ theme_class }}">
+
+  {% if include.link %}
+    <a href="{{ site.baseurl }}{{ include.link }}">
+  {% endif %}
+
+  <div class="full-screen-content content">
+    <h{{include.heading}} class="full-screen-element-title">{{ include.title }}</h{{include.heading}}>
+    {% if include.description %}
+      <p>
+        {{ include.description }}
+      </p>
+    {% endif %}
+
+    <div class="meta-fields meta-fields--centered">
+      {% if include.published %}
+        <div class="meta-field">
+          <h4>{{ site.data["i18n"]["year"] }}</h4>
+          <p>{{ include.published }}</p>
+        </div>
+      {% endif %}
+      {% if include.runtime %}
+        <div class="meta-field">
+          <h4>{{ site.data["i18n"]["running_time"] }}</h4>
+          <p>{{ include.runtime }}</p>
+        </div>
+      {% endif %}
+      {% if include.category %}
+        <div class="meta-field">
+          <h4>{{ site.data["i18n"]["category"] }}</h4>
+          <p>{{ include.category }}</p>
+        </div>
+      {% endif %}
+    </div>
+
+    {% if include.watch %}
+      <div class="featured--watch">
+        <a href="{{ include.watch }}" class="button button--negative button--big">
+          Katso
+        </a>
+      </div>
+    {% endif %}
+
+  </div>
+
+  {% if include.liftup_image %}
+
+    {% if include.colorize %}
+      {% assign colorize_class = "full-screen-background-colorize" %}
+    {% endif %}
+
+    {% if include.fullscreen == true %}
+      <div class="full-screen-background {{ colorize_class }}">
+        <div class="full-screen-background-content">
+            <img src="{{ site.baseurl }}/images/{{ include.liftup_image.src }}" alt="{{ include.liftup_image.alt }}"/>
+        </div>
+      </div>
+    {% else %}
+      <div class="full-screen-background {{ colorize_class }}">
+        {% responsive_image_block %}
+          path: images/{{ include.liftup_image.src }}
+          alt: {{ include.liftup_image.alt }}
+          template: _includes/responsive-image-bg.html
+          max_width: 1280
+        {% endresponsive_image_block %}
+      </div>
+    {% endif %}
+  {% endif %}
+
+  {% if include.link %}
+    </a>
+  {% endif %}
+</div>

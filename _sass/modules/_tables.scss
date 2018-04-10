@@ -1,0 +1,58 @@
+table {
+    border-collapse: collapse;
+    font-family: $alt-font-family;
+    width: 100%;
+}
+
+th {
+    border: $line-stroke-width / 2 solid $line-color-strong;
+    border-bottom-width: $line-stroke-width;
+    border-top: 0;
+    letter-spacing: 0.1em;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+td {
+    border: $line-stroke-width / 2 solid $line-color;
+}
+
+th,
+td {
+    padding: $spacing-unit / 2 $spacing-unit;
+    vertical-align: top;
+
+    small {
+        display: block;
+    }
+
+    &.table-cell--center {
+        text-align: center;
+    }
+
+    &:first-child {
+        border-left: 0;
+    }
+    &:last-child {
+        border-right: 0;
+    }
+}
+
+table {
+    &.table--pricing {
+        h3, h4, h5, h6 {
+            margin: 0;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0 0 0 $spacing-unit / 2;
+            
+            li {
+                font-size: $ui-font-size;
+                margin: 0;
+                list-style: square;
+            }
+        }
+    }
+}

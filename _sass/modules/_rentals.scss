@@ -1,0 +1,17 @@
+table {
+    .rental--make {
+        width: 10em;
+        word-break: break-all;
+    }
+
+    td.rental--price {
+        @extend h4;
+        display: table-cell;
+        margin: 0;
+        width: 8em;
+
+        span {
+            font-size: 0.85em;
+        }
+    }
+}

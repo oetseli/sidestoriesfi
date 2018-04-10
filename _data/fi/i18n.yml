@@ -1,0 +1,15 @@
+crew: "Tiimi"
+year: "Vuosi"
+running_time: "Kesto"
+category: "Genre"
+roles:
+  director: "Ohjaus"
+  script_director: "Käsikirjoitus & Ohjaus"
+  producer: "Tuotanto"
+  editor: "Leikkaus"
+  dop: "Kuvaus"
+  sound: "Ääni"
+
+read_more: "Lue lisää"
+contact_us: "Ota yhteyttä"
+follow_us: "Seuraa meitä"

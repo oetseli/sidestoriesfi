@@ -1,0 +1,10 @@
+{% for i in resized %}
+    {% capture image_url %}
+        {{ site.baseurl }}/{{ i.path }}
+    {% endcapture %}
+
+    <div role="presentation" aria-hidden="true" class="background-image" style="background-image: url({{ image_url }});">
+
+    </div>
+    {% break %}
+{% endfor %}
